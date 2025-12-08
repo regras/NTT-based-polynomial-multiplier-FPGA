@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Mon Nov 17 16:32:58 2025
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : nttParametric
+Top-level Entity Name : PolyMult_v2
+Family : Cyclone IV GX
+Total logic elements : 7,647
+    Total combinational functions : 6,858
+    Dedicated logic registers : 2,641
+Total registers : 2641
+Total pins : 39
+Total virtual pins : 0
+Total memory bits : 101,933
+Embedded Multiplier 9-bit elements : 18
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

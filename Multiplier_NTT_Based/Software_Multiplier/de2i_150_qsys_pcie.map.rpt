@@ -1,0 +1,771 @@
+Analysis & Synthesis report for de2i_150_qsys_pcie
+Tue Nov 18 16:30:22 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Tue Nov 18 16:30:22 2025               ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; de2i_150_qsys_pcie                              ;
+; Top-level Entity Name              ; de2i_150_qsys_pcie                              ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                       ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                       ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                       ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CGX150DF31C7    ;                    ;
+; Top-level entity name                                                      ; de2i_150_qsys_pcie ; de2i_150_qsys_pcie ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Optimization Technique                                                     ; Speed              ; Balanced           ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 18 16:29:27 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2i_150_qsys_pcie -c de2i_150_qsys_pcie
+Warning (125092): Tcl Script File de2i_150_qsys/synthesis/de2i_150_qsys.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE de2i_150_qsys/synthesis/de2i_150_qsys.qip
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12248): Elaborating Qsys system entity "de2i_150_qsys.qsys"
+Info (12250): 2025.11.18.16:29:31 Progress: Loading Projeto_NTT/de2i_150_qsys.qsys
+Info (12250): 2025.11.18.16:29:32 Progress: Reading input file
+Info (12250): 2025.11.18.16:29:32 Progress: Adding clk_50 [clock_source 13.0]
+Info (12250): 2025.11.18.16:29:32 Progress: Parameterizing module clk_50
+Info (12250): 2025.11.18.16:29:32 Progress: Adding pcie_ip [altera_pcie_hard_ip 13.0]
+Info (12250): 2025.11.18.16:29:39 Progress: Parameterizing module pcie_ip
+Info (12250): 2025.11.18.16:29:39 Progress: Adding sgdma [altera_avalon_sgdma 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module sgdma
+Info (12250): 2025.11.18.16:29:40 Progress: Adding onchip_memory [altera_avalon_onchip_memory2 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module onchip_memory
+Info (12250): 2025.11.18.16:29:40 Progress: Adding nios2 [altera_nios2_qsys 13.0]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module nios2
+Info (12250): 2025.11.18.16:29:40 Progress: Adding led [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module led
+Info (12250): 2025.11.18.16:29:40 Progress: Adding button [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module button
+Info (12250): 2025.11.18.16:29:40 Progress: Adding fifo_memory [altera_avalon_fifo 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module fifo_memory
+Info (12250): 2025.11.18.16:29:40 Progress: Adding fifo_0 [altera_avalon_fifo 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module fifo_0
+Info (12250): 2025.11.18.16:29:40 Progress: Adding fifo_1 [altera_avalon_fifo 13.0.1.99.2]
+Info (12250): 2025.11.18.16:29:40 Progress: Parameterizing module fifo_1
+Info (12250): 2025.11.18.16:29:40 Progress: Building connections
+Info (12250): 2025.11.18.16:29:41 Progress: Parameterizing connections
+Info (12250): 2025.11.18.16:29:41 Progress: Validating
+Info (12250): 2025.11.18.16:29:43 Progress: Done reading input file
+Info (12250): De2i_150_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
+Info (12250): De2i_150_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 13.0)
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 13.0), "avalon_clk" (altera_clock_bridge 13.0)
+Error (12252): De2i_150_qsys.pcie_ip.: set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+Error (12252): De2i_150_qsys.pcie_ip.: Command: C:/altera/13.0sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/13.0sp1/ip/altera/altera_pcie/altera_pcie_avmm/altpcie_hip_pipen1b_qsys.v --source=C:/altera/13.0sp1/ip/altera/altera_pcie/altera_pcie_avmm/altpcie_hip_pipen1b_qsys.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0001_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on
+Error (12252): De2i_150_qsys.pcie_ip.: *******************************************************************
+Error (12252): De2i_150_qsys.pcie_ip.: Running Quartus II 32-bit Generate HDL Interface
+Error (12252): De2i_150_qsys.pcie_ip.:     Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Error (12252): De2i_150_qsys.pcie_ip.:     Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+Error (12252): De2i_150_qsys.pcie_ip.:     Your use of Altera Corporation's design tools, logic functions 
+Error (12252): De2i_150_qsys.pcie_ip.:     and other software and tools, and its AMPP partner logic 
+Error (12252): De2i_150_qsys.pcie_ip.:     functions, and any output files from any of the foregoing 
+Error (12252): De2i_150_qsys.pcie_ip.:     (including device programming or simulation files), and any 
+Error (12252): De2i_150_qsys.pcie_ip.:     associated documentation or information are expressly subject 
+Error (12252): De2i_150_qsys.pcie_ip.:     to the terms and conditions of the Altera Program License 
+Error (12252): De2i_150_qsys.pcie_ip.:     Subscription Agreement, Altera MegaCore Function License 
+Error (12252): De2i_150_qsys.pcie_ip.:     Agreement, or other applicable license agreement, including, 
+Error (12252): De2i_150_qsys.pcie_ip.:     without limitation, that your use is for the sole purpose of 
+Error (12252): De2i_150_qsys.pcie_ip.:     programming logic devices manufactured by Altera and sold by 
+Error (12252): De2i_150_qsys.pcie_ip.:     Altera or its authorized distributors.  Please refer to the 
+Error (12252): De2i_150_qsys.pcie_ip.:     applicable agreement for further details.
+Error (12252): De2i_150_qsys.pcie_ip.:     Processing started: Tue Nov 18 16:29:35 2025
+Error (12252): De2i_150_qsys.pcie_ip.: Command: quartus_map not_a_project --generate_hdl_interface=C:/altera/13.0sp1/ip/altera/altera_pcie/altera_pcie_avmm/altpcie_hip_pipen1b_qsys.v --source=C:/altera/13.0sp1/ip/altera/altera_pcie/altera_pcie_avmm/altpcie_hip_pipen1b_qsys.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0001_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on
+Error (12252): De2i_150_qsys.pcie_ip.: Quartus II 32-bit Generate HDL Interface was unsuccessful. 0 errors, 0 warnings
+Error (12252): De2i_150_qsys.pcie_ip.:     Peak virtual memory: 282 megabytes
+Error (12252): De2i_150_qsys.pcie_ip.:     Processing ended: Tue Nov 18 16:29:36 2025
+Error (12252): De2i_150_qsys.pcie_ip.:     Elapsed time: 00:00:01
+Error (12252): De2i_150_qsys.pcie_ip.:     Total CPU time (on all processors): 00:00:01
+Error (12252): De2i_150_qsys.pcie_ip.: Command took 3.120s
+Error (12252): De2i_150_qsys.pcie_ip.: Analyser output file not present: altpcie_hip_pipen1b_qsys.v.xml
+Error (12252): De2i_150_qsys.pcie_ip.: No definition of altpcie_hip_pipen1b_qsys in C:/altera/13.0sp1/ip/altera/altera_pcie/altera_pcie_avmm/altpcie_hip_pipen1b_qsys.v
+Info (12250): De2i_150_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
+Info (12250): De2i_150_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip.test_out_export: Interface has no signals
+Info (12250): De2i_150_qsys.pcie_ip.altgx_internal: Family: Cyclone IV GX
+Info (12250): De2i_150_qsys.pcie_ip.altgx_internal: Lanes: 1
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.pcie_core_clk cannot be both connected and exported
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_analogreset must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_digitalreset must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_deemph_0 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_margin_0 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.test_out_export must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.pll_powerdown_pcs must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitch_pcs must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitchbaseclock_pcs must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_2 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_3 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_4 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_5 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_6 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_7 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_8 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_9 must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip.reset_controller_internal: reset_controller_internal.reset_n_out cannot be both connected and exported
+Info (12250): De2i_150_qsys.button: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): De2i_150_qsys.fifo_0: For Avalon-ST and Avalon-MM combinations, data width is 32 bits.
+Info (12250): De2i_150_qsys.fifo_1: For Avalon-ST and Avalon-MM combinations, data width is 32 bits.
+Warning (12251): De2i_150_qsys.fifo_0: fifo_0.in_csr must be connected to an Avalon-MM master
+Warning (12251): De2i_150_qsys.fifo_1: fifo_1.in_csr must be connected to an Avalon-MM master
+Warning (12251): De2i_150_qsys.pcie_ip: pcie_ip.powerdown must be exported, or connected to a matching conduit.
+Warning (12251): De2i_150_qsys.pcie_ip: Interrupt sender pcie_ip.cra_irq is not connected to an interrupt receiver
+Warning (12251): De2i_150_qsys.fifo_0: Interrupt sender fifo_0.in_irq is not connected to an interrupt receiver
+Warning (12251): De2i_150_qsys.fifo_1: Interrupt sender fifo_1.in_irq is not connected to an interrupt receiver
+Info (12250): De2i_150_qsys: Generating de2i_150_qsys "de2i_150_qsys" for QUARTUS_SYNTH
+Info (12250): Pipeline_bridge_swap_transform: After transform: 9 modules, 51 connections
+Info (12250): No custom instruction connections, skipping transform 
+Info (12250): Merlin_translator_transform: After transform: 27 modules, 129 connections
+Info (12250): Merlin_domain_transform: After transform: 58 modules, 348 connections
+Info (12250): Merlin_router_transform: After transform: 76 modules, 426 connections
+Info (12250): Merlin_traffic_limiter_transform: After transform: 79 modules, 440 connections
+Info (12250): Merlin_burst_transform: After transform: 86 modules, 469 connections
+Info (12250): Reset_adaptation_transform: After transform: 88 modules, 345 connections
+Info (12250): Merlin_network_to_switch_transform: After transform: 121 modules, 415 connections
+Info (12250): Merlin_width_transform: After transform: 139 modules, 469 connections
+Info (12250): Limiter_update_transform: After transform: 139 modules, 472 connections
+Info (12250): Merlin_mm_transform: After transform: 139 modules, 472 connections
+Info (12250): Merlin_interrupt_mapper_transform: After transform: 141 modules, 478 connections
+Info (12250): Merlin_interrupt_fanout_transform: After transform: 142 modules, 481 connections
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): De2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info (12250): Pipeline_bridge_swap_transform: After transform: 10 modules, 64 connections
+Info (12250): No custom instruction connections, skipping transform 
+Info (12250): No Avalon connections, skipping transform 
+Info (12250): Merlin_translator_transform: After transform: 10 modules, 64 connections
+Info (12250): Reset_adaptation_transform: After transform: 11 modules, 66 connections
+Info (12250): Merlin_mm_transform: After transform: 11 modules, 66 connections
+Info (12250): Pcie_ip: "de2i_150_qsys" instantiated altera_pcie_hard_ip "pcie_ip"
+Info (12250): Sgdma: Starting RTL generation for module 'de2i_150_qsys_sgdma'
+Info (12250): Sgdma:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=de2i_150_qsys_sgdma --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0002_sgdma_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0002_sgdma_gen//de2i_150_qsys_sgdma_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Sgdma: Done RTL generation for module 'de2i_150_qsys_sgdma'
+Info (12250): Sgdma: "de2i_150_qsys" instantiated altera_avalon_sgdma "sgdma"
+Info (12250): Onchip_memory: Starting RTL generation for module 'de2i_150_qsys_onchip_memory'
+Info (12250): Onchip_memory:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=de2i_150_qsys_onchip_memory --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0003_onchip_memory_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0003_onchip_memory_gen//de2i_150_qsys_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory: Done RTL generation for module 'de2i_150_qsys_onchip_memory'
+Info (12250): Onchip_memory: "de2i_150_qsys" instantiated altera_avalon_onchip_memory2 "onchip_memory"
+Info (12250): Nios2: Starting RTL generation for module 'de2i_150_qsys_nios2'
+Info (12250): Nios2:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=de2i_150_qsys_nios2 --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0004_nios2_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0004_nios2_gen//de2i_150_qsys_nios2_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info (12250): Nios2: # 2025.11.18 16:30:02 (*) Starting Nios II generation
+Info (12250): Nios2: # 2025.11.18 16:30:02 (*)   Checking for plaintext license.
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   LM_LICENSE_FILE environment variable is empty
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   Plaintext license not found.
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   No license required to generate encrypted Nios II/e.
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   Elaborating CPU configuration settings
+Info (12250): Nios2: # 2025.11.18 16:30:04 (*)   Creating all objects for CPU
+Info (12250): Nios2: # 2025.11.18 16:30:05 (*)   Generating RTL from CPU objects
+Info (12250): Nios2: # 2025.11.18 16:30:05 (*)   Creating plain-text RTL
+Info (12250): Nios2: # 2025.11.18 16:30:08 (*) Done Nios II generation
+Info (12250): Nios2: Done RTL generation for module 'de2i_150_qsys_nios2'
+Info (12250): Nios2: "de2i_150_qsys" instantiated altera_nios2_qsys "nios2"
+Info (12250): Led: Starting RTL generation for module 'de2i_150_qsys_led'
+Info (12250): Led:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=de2i_150_qsys_led --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0005_led_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0005_led_gen//de2i_150_qsys_led_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Led: Done RTL generation for module 'de2i_150_qsys_led'
+Info (12250): Led: "de2i_150_qsys" instantiated altera_avalon_pio "led"
+Info (12250): Button: Starting RTL generation for module 'de2i_150_qsys_button'
+Info (12250): Button:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=de2i_150_qsys_button --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0006_button_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0006_button_gen//de2i_150_qsys_button_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Button: Done RTL generation for module 'de2i_150_qsys_button'
+Info (12250): Button: "de2i_150_qsys" instantiated altera_avalon_pio "button"
+Info (12250): Fifo_0: Starting RTL generation for module 'de2i_150_qsys_fifo_0'
+Info (12250): Fifo_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=de2i_150_qsys_fifo_0 --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0007_fifo_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0007_fifo_0_gen//de2i_150_qsys_fifo_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Fifo_0: Done RTL generation for module 'de2i_150_qsys_fifo_0'
+Info (12250): Fifo_0: "de2i_150_qsys" instantiated altera_avalon_fifo "fifo_0"
+Info (12250): Fifo_1: Starting RTL generation for module 'de2i_150_qsys_fifo_1'
+Info (12250): Fifo_1:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=de2i_150_qsys_fifo_1 --dir=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0008_fifo_1_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0008_fifo_1_gen//de2i_150_qsys_fifo_1_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Fifo_1: Done RTL generation for module 'de2i_150_qsys_fifo_1'
+Info (12250): Fifo_1: "de2i_150_qsys" instantiated altera_avalon_fifo "fifo_1"
+Info (12250): Nios2_instruction_master_translator: "de2i_150_qsys" instantiated altera_merlin_master_translator "nios2_instruction_master_translator"
+Info (12250): Nios2_jtag_debug_module_translator: "de2i_150_qsys" instantiated altera_merlin_slave_translator "nios2_jtag_debug_module_translator"
+Info (12250): Nios2_instruction_master_translator_avalon_universal_master_0_agent: "de2i_150_qsys" instantiated altera_merlin_master_agent "nios2_instruction_master_translator_avalon_universal_master_0_agent"
+Info (12250): Nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent: "de2i_150_qsys" instantiated altera_merlin_slave_agent "nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info (12250): Nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "de2i_150_qsys" instantiated altera_avalon_sc_fifo "nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info (12250): Addr_router: "de2i_150_qsys" instantiated altera_merlin_router "addr_router"
+Info (12250): Id_router: "de2i_150_qsys" instantiated altera_merlin_router "id_router"
+Info (12250): Id_router_001: "de2i_150_qsys" instantiated altera_merlin_router "id_router_001"
+Info (12250): Addr_router_002: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_002"
+Info (12250): Addr_router_003: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_003"
+Info (12250): Addr_router_004: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_004"
+Info (12250): Id_router_002: "de2i_150_qsys" instantiated altera_merlin_router "id_router_002"
+Info (12250): Id_router_003: "de2i_150_qsys" instantiated altera_merlin_router "id_router_003"
+Info (12250): Id_router_007: "de2i_150_qsys" instantiated altera_merlin_router "id_router_007"
+Info (12250): Addr_router_007: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_007"
+Info (12250): Id_router_008: "de2i_150_qsys" instantiated altera_merlin_router "id_router_008"
+Info (12250): Limiter: "de2i_150_qsys" instantiated altera_merlin_traffic_limiter "limiter"
+Info (12250): Burst_adapter: "de2i_150_qsys" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info (12250): Rst_controller: "de2i_150_qsys" instantiated altera_reset_controller "rst_controller"
+Info (12250): Cmd_xbar_demux: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info (12250): Cmd_xbar_mux: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info (12250): Rsp_xbar_mux: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Cmd_xbar_demux_002: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_002"
+Info (12250): Cmd_xbar_demux_003: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_003"
+Info (12250): Cmd_xbar_demux_004: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_004"
+Info (12250): Cmd_xbar_demux_006: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_006"
+Info (12250): Cmd_xbar_mux_002: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Cmd_xbar_mux_007: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux_007"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_xbar_demux_002: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info (12250): Rsp_xbar_demux_007: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_007"
+Info (12250): Rsp_xbar_mux_002: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux_002"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_xbar_mux_003: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux_003"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Cmd_xbar_demux_007: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_007"
+Info (12250): Rsp_xbar_demux_008: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_008"
+Info (12250): Rsp_xbar_mux_007: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux_007"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Width_adapter: "de2i_150_qsys" instantiated altera_merlin_width_adapter "width_adapter"
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_address_alignment.sv
+Info (12250): Reusing file C:/users/crossover/Documents/Projeto_NTT/db/ip/de2i_150_qsys/submodules/altera_merlin_burst_uncompressor.sv
+Info (12250): Irq_mapper: "de2i_150_qsys" instantiated altera_irq_mapper "irq_mapper"
+Info (12250): Irq_mapper_001: "de2i_150_qsys" instantiated altera_irq_mapper "irq_mapper_001"
+Info (12250): Pcie_internal_hip: "pcie_ip" instantiated altera_pcie_internal_hard_ip_qsys "pcie_internal_hip"
+Info (12250): Altgx_internal: Family: Cyclone IV GX
+Info (12250): Altgx_internal: Subprotocol: Gen 1-x1
+Info (12250): Altgx_internal: qmegawiz -silent module=alt_c3gxb LOCKDOWN_EXCL=PCIE IP_MODE=PCIE_HIP_8 gxb_analog_power=AUTO tx_analog_power=AUTO elec_idle_infer_enable=false tx_allow_polarity_inversion=false rx_cdrctrl_enable=true hip_tx_clkout rx_elecidleinfersel fixedclk enable_0ppm=false pll_powerdown intended_device_family=cycloneiv starting_channel_number=84   deviceFamily="Cyclone IV GX"  wiz_subprotocol="Gen 1-x1"  OPTIONAL_FILES=NONE de2i_150_qsys_pcie_ip_altgx_internal.v
+Warning (12251): Quartus II 32-bit Generate HDL Interface was unsuccessful. 0 errors, 0 warnings
+Error (12252):     Peak virtual memory: 282 megabytes
+Error (12252):     Processing ended: Tue Nov 18 16:30:19 2025
+Error (12252):     Elapsed time: 00:00:01
+Error (12252):     Total CPU time (on all processors): 00:00:01
+Error (12252): Altgx_internal: File C:/users/crossover/AppData/Local/Temp/alt0410_643842585561857858.dir/0047_sopcgen/de2i_150_qsys_pcie_ip_altgx_internal.v written by generation callback did not contain a module called de2i_150_qsys_pcie_ip_altgx_internal
+Info (12250): Altgx_internal: "pcie_ip" instantiated altera_pcie_internal_altgx "altgx_internal"
+Error (12252): Generation stopped, 3 or more modules remaining
+Info (12250): De2i_150_qsys: Done de2i_150_qsys" with 51 modules, 227 files, 5914122 bytes
+Info (12249): Finished elaborating Qsys system entity "de2i_150_qsys.qsys"
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/de2i_150_qsys.v
+    Info (12023): Found entity 1: de2i_150_qsys
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator
+    Info (12023): Found entity 2: altera_merlin_arb_adder
+Info (12021): Found 7 design units, including 7 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min
+    Info (12023): Found entity 5: altera_merlin_burst_adapter
+    Info (12023): Found entity 6: altera_merlin_burst_adapter_uncompressed_only
+    Info (12023): Found entity 7: altera_merlin_burst_adapter_full
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_traffic_limiter.sv
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer
+Info (12021): Found 4 design units, including 4 entities, in source file db/ip/de2i_150_qsys/submodules/altpcie_hip_pipen1b_qsys.v
+    Info (12023): Found entity 1: altpcie_hip_pipen1b_qsys
+    Info (12023): Found entity 2: alt4gxb_reset_controller
+    Info (12023): Found entity 3: altpcie_txcred_patch
+    Info (12023): Found entity 4: altpcie_tl_cfg_pipe
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_clksync.v
+    Info (12023): Found entity 1: altpciexpav_clksync
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_lite_app.v
+    Info (12023): Found entity 1: altpciexpav_lite_app
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_a2p_addrtrans.v
+    Info (12023): Found entity 1: altpciexpav_stif_a2p_addrtrans
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_a2p_fixtrans.v
+    Info (12023): Found entity 1: altpciexpav_stif_a2p_fixtrans
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_a2p_vartrans.v
+    Info (12023): Found entity 1: altpciexpav_stif_a2p_vartrans
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_app.v
+    Info (12023): Found entity 1: altpciexpav_stif_app
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_control_register.v
+    Info (12023): Found entity 1: altpciexpav_stif_control_register
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_cr_avalon.v
+    Info (12023): Found entity 1: altpciexpav_stif_cr_avalon
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_cr_interrupt.v
+    Info (12023): Found entity 1: altpciexpav_stif_cr_interrupt
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_cr_mailbox.v
+    Info (12023): Found entity 1: altpciexpav_stif_cr_mailbox
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_p2a_addrtrans.v
+    Info (12023): Found entity 1: altpciexpav_stif_p2a_addrtrans
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_reg_fifo.v
+    Info (12023): Found entity 1: altpciexpav_stif_reg_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_rx.v
+    Info (12023): Found entity 1: altpciexpav_stif_rx
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_rx_cntrl.v
+    Info (12023): Found entity 1: altpciexpav_stif_rx_cntrl
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_rx_resp.v
+    Info (12023): Found entity 1: altpciexpav_stif_rx_resp
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_tx.v
+    Info (12023): Found entity 1: altpciexpav_stif_tx
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_tx_cntrl.v
+    Info (12023): Found entity 1: altpciexpav_stif_tx_cntrl
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_txavl_cntrl.v
+    Info (12023): Found entity 1: altpciexpav_stif_txavl_cntrl
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/altpciexpav_stif_txresp_cntrl.v
+    Info (12023): Found entity 1: altpciexpav_stif_txresp_cntrl
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_addr_router.sv
+    Info (12023): Found entity 1: de2i_150_qsys_addr_router_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_addr_router
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_addr_router_002.sv
+    Info (12023): Found entity 1: de2i_150_qsys_addr_router_002_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_addr_router_002
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_addr_router_003.sv
+    Info (12023): Found entity 1: de2i_150_qsys_addr_router_003_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_addr_router_003
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_addr_router_004.sv
+    Info (12023): Found entity 1: de2i_150_qsys_addr_router_004_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_addr_router_004
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_addr_router_007.sv
+    Info (12023): Found entity 1: de2i_150_qsys_addr_router_007_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_addr_router_007
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_button.v
+    Info (12023): Found entity 1: de2i_150_qsys_button
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_demux.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_demux_002.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_demux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_demux_003.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_demux_003
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_demux_004.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_demux_004
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_demux_006.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_demux_006
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_demux_007.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_demux_007
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_mux.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_mux_002.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_mux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_cmd_xbar_mux_007.sv
+    Info (12023): Found entity 1: de2i_150_qsys_cmd_xbar_mux_007
+Info (12021): Found 4 design units, including 4 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_fifo_0.v
+    Info (12023): Found entity 1: de2i_150_qsys_fifo_0_single_clock_fifo
+    Info (12023): Found entity 2: de2i_150_qsys_fifo_0_scfifo_with_controls
+    Info (12023): Found entity 3: de2i_150_qsys_fifo_0_map_avalonmm_to_avalonst
+    Info (12023): Found entity 4: de2i_150_qsys_fifo_0
+Info (12021): Found 4 design units, including 4 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_fifo_1.v
+    Info (12023): Found entity 1: de2i_150_qsys_fifo_1_single_clock_fifo
+    Info (12023): Found entity 2: de2i_150_qsys_fifo_1_scfifo_with_controls
+    Info (12023): Found entity 3: de2i_150_qsys_fifo_1_map_avalonst_to_avalonmm
+    Info (12023): Found entity 4: de2i_150_qsys_fifo_1
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_id_router.sv
+    Info (12023): Found entity 1: de2i_150_qsys_id_router_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_id_router
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_id_router_001.sv
+    Info (12023): Found entity 1: de2i_150_qsys_id_router_001_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_id_router_001
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_id_router_002.sv
+    Info (12023): Found entity 1: de2i_150_qsys_id_router_002_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_id_router_002
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_id_router_003.sv
+    Info (12023): Found entity 1: de2i_150_qsys_id_router_003_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_id_router_003
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_id_router_007.sv
+    Info (12023): Found entity 1: de2i_150_qsys_id_router_007_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_id_router_007
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_id_router_008.sv
+    Info (12023): Found entity 1: de2i_150_qsys_id_router_008_default_decode
+    Info (12023): Found entity 2: de2i_150_qsys_id_router_008
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_irq_mapper.sv
+    Info (12023): Found entity 1: de2i_150_qsys_irq_mapper
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_irq_mapper_001.sv
+    Info (12023): Found entity 1: de2i_150_qsys_irq_mapper_001
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_led.v
+    Info (12023): Found entity 1: de2i_150_qsys_led
+Info (12021): Found 21 design units, including 21 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_nios2.v
+    Info (12023): Found entity 1: de2i_150_qsys_nios2_register_bank_a_module
+    Info (12023): Found entity 2: de2i_150_qsys_nios2_register_bank_b_module
+    Info (12023): Found entity 3: de2i_150_qsys_nios2_nios2_oci_debug
+    Info (12023): Found entity 4: de2i_150_qsys_nios2_ociram_sp_ram_module
+    Info (12023): Found entity 5: de2i_150_qsys_nios2_nios2_ocimem
+    Info (12023): Found entity 6: de2i_150_qsys_nios2_nios2_avalon_reg
+    Info (12023): Found entity 7: de2i_150_qsys_nios2_nios2_oci_break
+    Info (12023): Found entity 8: de2i_150_qsys_nios2_nios2_oci_xbrk
+    Info (12023): Found entity 9: de2i_150_qsys_nios2_nios2_oci_dbrk
+    Info (12023): Found entity 10: de2i_150_qsys_nios2_nios2_oci_itrace
+    Info (12023): Found entity 11: de2i_150_qsys_nios2_nios2_oci_td_mode
+    Info (12023): Found entity 12: de2i_150_qsys_nios2_nios2_oci_dtrace
+    Info (12023): Found entity 13: de2i_150_qsys_nios2_nios2_oci_compute_tm_count
+    Info (12023): Found entity 14: de2i_150_qsys_nios2_nios2_oci_fifowp_inc
+    Info (12023): Found entity 15: de2i_150_qsys_nios2_nios2_oci_fifocount_inc
+    Info (12023): Found entity 16: de2i_150_qsys_nios2_nios2_oci_fifo
+    Info (12023): Found entity 17: de2i_150_qsys_nios2_nios2_oci_pib
+    Info (12023): Found entity 18: de2i_150_qsys_nios2_nios2_oci_im
+    Info (12023): Found entity 19: de2i_150_qsys_nios2_nios2_performance_monitors
+    Info (12023): Found entity 20: de2i_150_qsys_nios2_nios2_oci
+    Info (12023): Found entity 21: de2i_150_qsys_nios2
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_nios2_jtag_debug_module_sysclk.v
+    Info (12023): Found entity 1: de2i_150_qsys_nios2_jtag_debug_module_sysclk
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_nios2_jtag_debug_module_tck.v
+    Info (12023): Found entity 1: de2i_150_qsys_nios2_jtag_debug_module_tck
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_nios2_jtag_debug_module_wrapper.v
+    Info (12023): Found entity 1: de2i_150_qsys_nios2_jtag_debug_module_wrapper
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_nios2_oci_test_bench.v
+    Info (12023): Found entity 1: de2i_150_qsys_nios2_oci_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_nios2_test_bench.v
+    Info (12023): Found entity 1: de2i_150_qsys_nios2_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_onchip_memory.v
+    Info (12023): Found entity 1: de2i_150_qsys_onchip_memory
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_pcie_ip.v
+    Info (12023): Found entity 1: de2i_150_qsys_pcie_ip
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_pcie_ip_altgx_internal.v
+    Info (12023): Found entity 1: de2i_150_qsys_pcie_ip_altgx_internal_alt_c3gxb_u7h8
+    Info (12023): Found entity 2: de2i_150_qsys_pcie_ip_altgx_internal
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_demux_002.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_demux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_demux_007.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_demux_007
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_demux_008.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_demux_008
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_mux.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_mux_002.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_mux_002
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_mux_003.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_mux_003
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_rsp_xbar_mux_007.sv
+    Info (12023): Found entity 1: de2i_150_qsys_rsp_xbar_mux_007
+Info (12021): Found 19 design units, including 19 entities, in source file db/ip/de2i_150_qsys/submodules/de2i_150_qsys_sgdma.v
+    Info (12023): Found entity 1: control_status_slave_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 2: descriptor_read_which_resides_within_de2i_150_qsys_sgdma_control_bits_fifo
+    Info (12023): Found entity 3: descriptor_read_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 4: descriptor_write_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 5: de2i_150_qsys_sgdma_chain
+    Info (12023): Found entity 6: de2i_150_qsys_sgdma_command_grabber
+    Info (12023): Found entity 7: de2i_150_qsys_sgdma_m_read
+    Info (12023): Found entity 8: de2i_150_qsys_sgdma_m_readfifo_m_readfifo
+    Info (12023): Found entity 9: de2i_150_qsys_sgdma_m_readfifo
+    Info (12023): Found entity 10: sixteen_bit_byteenable_FSM_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 11: thirty_two_bit_byteenable_FSM_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 12: sixty_four_bit_byteenable_FSM_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 13: byteenable_gen_which_resides_within_de2i_150_qsys_sgdma
+    Info (12023): Found entity 14: de2i_150_qsys_sgdma_m_write
+    Info (12023): Found entity 15: de2i_150_qsys_sgdma_command_fifo
+    Info (12023): Found entity 16: de2i_150_qsys_sgdma_desc_address_fifo
+    Info (12023): Found entity 17: de2i_150_qsys_sgdma_status_token_fifo
+    Info (12023): Found entity 18: de2i_150_qsys_sgdma_stream_fifo
+    Info (12023): Found entity 19: de2i_150_qsys_sgdma
+Warning (10238): Verilog Module Declaration warning at de2i_150_qsys_pcie.v(209): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "de2i_150_qsys_pcie"
+Warning (12125): Using design file de2i_150_qsys_pcie.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: de2i_150_qsys_pcie
+Info (12127): Elaborating entity "de2i_150_qsys_pcie" for the top level hierarchy
+Warning (10034): Output port "DRAM_ADDR" at de2i_150_qsys_pcie.v(226) has no driver
+Warning (10034): Output port "DRAM_BA" at de2i_150_qsys_pcie.v(227) has no driver
+Warning (10034): Output port "DRAM_DQM" at de2i_150_qsys_pcie.v(233) has no driver
+Warning (10034): Output port "ENET_TX_DATA" at de2i_150_qsys_pcie.v(255) has no driver
+Warning (10034): Output port "FS_ADDR" at de2i_150_qsys_pcie.v(271) has no driver
+Warning (10034): Output port "HEX0" at de2i_150_qsys_pcie.v(281) has no driver
+Warning (10034): Output port "HEX1" at de2i_150_qsys_pcie.v(282) has no driver
+Warning (10034): Output port "HEX2" at de2i_150_qsys_pcie.v(283) has no driver
+Warning (10034): Output port "HEX3" at de2i_150_qsys_pcie.v(284) has no driver
+Warning (10034): Output port "HEX4" at de2i_150_qsys_pcie.v(285) has no driver
+Warning (10034): Output port "HEX5" at de2i_150_qsys_pcie.v(286) has no driver
+Warning (10034): Output port "HEX6" at de2i_150_qsys_pcie.v(287) has no driver
+Warning (10034): Output port "HEX7" at de2i_150_qsys_pcie.v(288) has no driver
+Warning (10034): Output port "LEDG[8]" at de2i_150_qsys_pcie.v(327) has no driver
+Warning (10034): Output port "LEDR[17..1]" at de2i_150_qsys_pcie.v(330) has no driver
+Warning (10034): Output port "SSRAM_BE" at de2i_150_qsys_pcie.v(354) has no driver
+Warning (10034): Output port "VGA_B" at de2i_150_qsys_pcie.v(379) has no driver
+Warning (10034): Output port "VGA_G" at de2i_150_qsys_pcie.v(382) has no driver
+Warning (10034): Output port "VGA_R" at de2i_150_qsys_pcie.v(384) has no driver
+Warning (10034): Output port "DRAM_CAS_N" at de2i_150_qsys_pcie.v(228) has no driver
+Warning (10034): Output port "DRAM_CKE" at de2i_150_qsys_pcie.v(229) has no driver
+Warning (10034): Output port "DRAM_CLK" at de2i_150_qsys_pcie.v(230) has no driver
+Warning (10034): Output port "DRAM_CS_N" at de2i_150_qsys_pcie.v(231) has no driver
+Warning (10034): Output port "DRAM_RAS_N" at de2i_150_qsys_pcie.v(234) has no driver
+Warning (10034): Output port "DRAM_WE_N" at de2i_150_qsys_pcie.v(235) has no driver
+Warning (10034): Output port "EEP_I2C_SCLK" at de2i_150_qsys_pcie.v(238) has no driver
+Warning (10034): Output port "ENET_GTX_CLK" at de2i_150_qsys_pcie.v(242) has no driver
+Warning (10034): Output port "ENET_MDC" at de2i_150_qsys_pcie.v(245) has no driver
+Warning (10034): Output port "ENET_RST_N" at de2i_150_qsys_pcie.v(247) has no driver
+Warning (10034): Output port "ENET_TX_EN" at de2i_150_qsys_pcie.v(256) has no driver
+Warning (10034): Output port "ENET_TX_ER" at de2i_150_qsys_pcie.v(257) has no driver
+Warning (10034): Output port "FL_CE_N" at de2i_150_qsys_pcie.v(263) has no driver
+Warning (10034): Output port "FL_OE_N" at de2i_150_qsys_pcie.v(264) has no driver
+Warning (10034): Output port "FL_WE_N" at de2i_150_qsys_pcie.v(266) has no driver
+Warning (10034): Output port "FL_WP_N" at de2i_150_qsys_pcie.v(267) has no driver
+Warning (10034): Output port "FL_RESET_N" at de2i_150_qsys_pcie.v(268) has no driver
+Warning (10034): Output port "G_SENSOR_SCLK" at de2i_150_qsys_pcie.v(277) has no driver
+Warning (10034): Output port "HSMC_CLKOUT0" at de2i_150_qsys_pcie.v(296) has no driver
+Warning (10034): Output port "HSMC_I2C_SCLK" at de2i_150_qsys_pcie.v(302) has no driver
+Warning (10034): Output port "I2C_SCLK" at de2i_150_qsys_pcie.v(310) has no driver
+Warning (10034): Output port "LCD_EN" at de2i_150_qsys_pcie.v(321) has no driver
+Warning (10034): Output port "LCD_ON" at de2i_150_qsys_pcie.v(322) has no driver
+Warning (10034): Output port "LCD_RS" at de2i_150_qsys_pcie.v(323) has no driver
+Warning (10034): Output port "LCD_RW" at de2i_150_qsys_pcie.v(324) has no driver
+Warning (10034): Output port "SD_CLK" at de2i_150_qsys_pcie.v(341) has no driver
+Warning (10034): Output port "SMA_CLKOUT" at de2i_150_qsys_pcie.v(348) has no driver
+Warning (10034): Output port "SSRAM_ADSC_N" at de2i_150_qsys_pcie.v(351) has no driver
+Warning (10034): Output port "SSRAM_ADSP_N" at de2i_150_qsys_pcie.v(352) has no driver
+Warning (10034): Output port "SSRAM_ADV_N" at de2i_150_qsys_pcie.v(353) has no driver
+Warning (10034): Output port "SSRAM_CLK" at de2i_150_qsys_pcie.v(355) has no driver
+Warning (10034): Output port "SSRAM_GW_N" at de2i_150_qsys_pcie.v(356) has no driver
+Warning (10034): Output port "SSRAM_OE_N" at de2i_150_qsys_pcie.v(357) has no driver
+Warning (10034): Output port "SSRAM_WE_N" at de2i_150_qsys_pcie.v(358) has no driver
+Warning (10034): Output port "SSRAM0_CE_N" at de2i_150_qsys_pcie.v(359) has no driver
+Warning (10034): Output port "SSRAM1_CE_N" at de2i_150_qsys_pcie.v(360) has no driver
+Warning (10034): Output port "TD_RESET_N" at de2i_150_qsys_pcie.v(369) has no driver
+Warning (10034): Output port "UART_RTS" at de2i_150_qsys_pcie.v(374) has no driver
+Warning (10034): Output port "UART_TXD" at de2i_150_qsys_pcie.v(376) has no driver
+Warning (10034): Output port "VGA_BLANK_N" at de2i_150_qsys_pcie.v(380) has no driver
+Warning (10034): Output port "VGA_CLK" at de2i_150_qsys_pcie.v(381) has no driver
+Warning (10034): Output port "VGA_HS" at de2i_150_qsys_pcie.v(383) has no driver
+Warning (10034): Output port "VGA_SYNC_N" at de2i_150_qsys_pcie.v(385) has no driver
+Warning (10034): Output port "VGA_VS" at de2i_150_qsys_pcie.v(386) has no driver
+Error (12153): Can't elaborate top-level user hierarchy
+Info (144001): Generated suppressed messages file C:/users/crossover/Documents/Projeto_NTT/de2i_150_qsys_pcie.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 35 errors, 180 warnings
+    Error: Peak virtual memory: 328 megabytes
+    Error: Processing ended: Tue Nov 18 16:30:22 2025
+    Error: Elapsed time: 00:00:55
+    Error: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/users/crossover/Documents/Projeto_NTT/de2i_150_qsys_pcie.map.smsg.
+
+

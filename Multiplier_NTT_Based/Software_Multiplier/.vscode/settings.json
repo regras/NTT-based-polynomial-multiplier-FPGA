@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "NTT_PcieCom.C": "cpp",
+        "NTT_PcieComunication.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}

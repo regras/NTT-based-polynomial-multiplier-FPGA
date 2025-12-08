@@ -1,0 +1,691 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do nttParametric_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/ShiftReg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ShiftReg
+# 
+# Top level modules:
+# 	ShiftReg
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/defines.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/BRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BRAM
+# 
+# Top level modules:
+# 	BRAM
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/NTTN.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NTTN
+# 
+# Top level modules:
+# 	NTTN
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/NTT2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NTT2
+# 
+# Top level modules:
+# 	NTT2
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/ModRed_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ModRed_sub
+# 
+# Top level modules:
+# 	ModRed_sub
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/ModRed.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ModRed
+# 
+# Top level modules:
+# 	ModRed
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/ModMult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ModMult
+# 
+# Top level modules:
+# 	ModMult
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/intMult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module intMult
+# 
+# Top level modules:
+# 	intMult
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/AddressGenerator.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module AddressGenerator
+# 
+# Top level modules:
+# 	AddressGenerator
+# 
+# vlog -vlog01compat -work work +incdir+C:/users/crossover/Documents/NTT-Parametric {C:/users/crossover/Documents/NTT-Parametric/NTT_PolyMul_test_v2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NTT_PolyMul_test_v2
+# 
+# Top level modules:
+# 	NTT_PolyMul_test_v2
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  NTT_PolyMul_test_v2
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps NTT_PolyMul_test_v2 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./nttParametric_run_msim_rtl_verilog.do PAUSED at line 21
+vlog +incdir+C:/users/crossover/Documents/NTT-Parametric C:/users/crossover/Documents/NTT-Parametric/PolyPointwiseMult.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PolyPointwiseMult
+# 
+# Top level modules:
+# 	PolyPointwiseMult
+
+vlog +incdir+C:/users/crossover/Documents/NTT-Parametric C:/users/crossover/Documents/NTT-Parametric/PolyMult_v2.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PolyMult_v2
+# 
+# Top level modules:
+# 	PolyMult_v2
+
+vlog +incdir+C:/users/crossover/Documents/NTT-Parametric C:/users/crossover/Documents/NTT-Parametric/NTT_PolyMul_test_v2.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NTT_PolyMul_test_v2
+# 
+# Top level modules:
+# 	NTT_PolyMul_test_v2
+
+vlog -work work +incdir+C:/users/crossover/Documents/NTT-Parametric C:/users/crossover/Documents/NTT-Parametric/*.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module AddressGenerator
+# -- Compiling module BRAM
+# -- Compiling module CSA
+# -- Compiling module FA
+# -- Compiling module ModMult
+# -- Compiling module ModRed
+# -- Compiling module ModRed_sub
+# -- Compiling module NTT2
+# -- Compiling module NTTN
+# -- Compiling module NTTN_test
+# -- Compiling module NTT_PolyMul_test
+# -- Compiling module NTT_PolyMul_test_v2
+# -- Compiling module PolyMult
+# ** Warning: C:/users/crossover/Documents/NTT-Parametric/PolyMult.v(198): (vlog-2249) Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: C:/users/crossover/Documents/NTT-Parametric/PolyMult.v(224): (vlog-2249) Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: C:/users/crossover/Documents/NTT-Parametric/PolyMult.v(399): (vlog-2249) Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: C:/users/crossover/Documents/NTT-Parametric/PolyMult.v(198): (vlog-2249) Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: C:/users/crossover/Documents/NTT-Parametric/PolyMult.v(224): (vlog-2249) Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# -- Compiling module PolyMult_test
+# -- Compiling module PolyMult_v2
+# -- Compiling module PolyPointwiseMult
+# -- Compiling module ShiftReg
+# -- Compiling module intMult
+# 
+# Top level modules:
+# 	NTTN_test
+# 	NTT_PolyMul_test
+# 	NTT_PolyMul_test_v2
+# 	PolyMult_test
+
+vsim work.NTT_PolyMul_test_v2
+# vsim work.NTT_PolyMul_test_v2 
+# Loading work.NTT_PolyMul_test_v2
+# Loading work.PolyMult_v2
+# Loading work.NTTN
+# Loading work.AddressGenerator
+# Loading work.ShiftReg
+# Loading work.PolyPointwiseMult
+# Loading work.BRAM
+# Loading work.NTT2
+# Loading work.ModMult
+# Loading work.intMult
+# Loading work.ModRed
+# Loading work.ModRed_sub
+# ** Warning: (vsim-3015) C:/users/crossover/Documents/NTT-Parametric/PolyMult_v2.v(283): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'q'. The port definition is at: C:/users/crossover/Documents/NTT-Parametric/PolyPointwiseMult.v(17).
+# 
+#         Region: /NTT_PolyMul_test_v2/uut/uut_polypointwise
+
+run -all
+# TB: Reset concluído.
+# TB: Iniciando MODO 0 - Carga de W/Params.
+# TB: Stream de W enviado. Aguardando (busy=0).
+# TB: MODO 0 Concluído.
+# TB: Iniciando MODO 1 - Carga de A (Bruto) = 1 + 2x + 3x^2.
+# TB: Polinômio A enviado. Aguardando (busy=0).
+# TB: MODO 1 Concluído (A está na RAM interna).
+# TB: Iniciando MODO 2 - Carga de B (Bruto) = 2.
+# TB: Polinômio B enviado. Aguardando (busy=0).
+# TB: MODO 2 Concluído (B está na RAM interna).
+# TB: Iniciando MODO 3 - GO! (Executando A * B).
+# TB: Comando 'GO' enviado. Aguardando processamento completo (done_all=1)...
+# Ciclo 26915000 [MULT]: Lendo idx=  0, A=0006, B=0004, q=1e01, result=24
+# Ciclo 26945000 [MULT]: Lendo idx=  1, A=0002, B=0000, q=1e01, result=0
+# Ciclo 26975000 [MULT]: Lendo idx=  2, A=0391, B=0395, q=1e01, result=4703
+# Ciclo 27005000 [MULT]: Lendo idx=  3, A=1a6c, B=1a70, q=1e01, result=3900
+# Ciclo 27035000 [MULT]: Lendo idx=  4, A=1dd8, B=097c, q=1e01, result=3232
+# Ciclo 27065000 [MULT]: Lendo idx=  5, A=0ae4, B=1489, q=1e01, result=3583
+# Ciclo 27095000 [MULT]: Lendo idx=  6, A=189c, B=0ef9, q=1e01, result=7609
+# Ciclo 27125000 [MULT]: Lendo idx=  7, A=18af, B=0f0c, q=1e01, result=3889
+# Ciclo 27155000 [MULT]: Lendo idx=  8, A=0a1a, B=19e5, q=1e01, result=6974
+# Ciclo 27185000 [MULT]: Lendo idx=  9, A=1256, B=0420, q=1e01, result=3259
+# Ciclo 27215000 [MULT]: Lendo idx= 10, A=166d, B=06a4, q=1e01, result=6605
+# Ciclo 27245000 [MULT]: Lendo idx= 11, A=0929, B=1761, q=1e01, result=2440
+# Ciclo 27275000 [MULT]: Lendo idx= 12, A=17f4, B=1083, q=1e01, result=2520
+# Ciclo 27305000 [MULT]: Lendo idx= 13, A=14f3, B=0d82, q=1e01, result=2654
+# Ciclo 27335000 [MULT]: Lendo idx= 14, A=1b1e, B=0490, q=1e01, result=1242
+# Ciclo 27365000 [MULT]: Lendo idx= 15, A=1202, B=1975, q=1e01, result=4839
+# Ciclo 27395000 [MULT]: Lendo idx= 16, A=0480, B=0aae, q=1e01, result=3840
+# Ciclo 27425000 [MULT]: Lendo idx= 17, A=0d29, B=1357, q=1e01, result=3051
+# Ciclo 27455000 [MULT]: Lendo idx= 18, A=1bee, B=15c2, q=1e01, result=6743
+# Ciclo 27485000 [MULT]: Lendo idx= 19, A=0e6f, B=0843, q=1e01, result=779
+# Ciclo 27515000 [MULT]: Lendo idx= 20, A=1741, B=0d4f, q=1e01, result=523
+# Ciclo 27545000 [MULT]: Lendo idx= 21, A=1aa8, B=10b6, q=1e01, result=6509
+# Ciclo 27575000 [MULT]: Lendo idx= 22, A=1d60, B=0953, q=1e01, result=5145
+# Ciclo 27605000 [MULT]: Lendo idx= 23, A=0abe, B=14b2, q=1e01, result=5146
+# Ciclo 27635000 [MULT]: Lendo idx= 24, A=1a6a, B=10aa, q=1e01, result=3171
+# Ciclo 27665000 [MULT]: Lendo idx= 25, A=171b, B=0d5b, q=1e01, result=7573
+# Ciclo 27695000 [MULT]: Lendo idx= 26, A=137f, B=1d41, q=1e01, result=6717
+# Ciclo 27725000 [MULT]: Lendo idx= 27, A=1503, B=00c4, q=1e01, result=5708
+# Ciclo 27755000 [MULT]: Lendo idx= 28, A=123d, B=0b69, q=1e01, result=6661
+# Ciclo 27785000 [MULT]: Lendo idx= 29, A=1970, B=129c, q=1e01, result=1597
+# Ciclo 27815000 [MULT]: Lendo idx= 30, A=0411, B=0ae7, q=1e01, result=6485
+# Ciclo 27845000 [MULT]: Lendo idx= 31, A=0c48, B=131e, q=1e01, result=5226
+# Ciclo 27875000 [MULT]: Lendo idx= 32, A=0d6f, B=1b6f, q=1e01, result=4125
+# Ciclo 27905000 [MULT]: Lendo idx= 33, A=1297, B=0296, q=1e01, result=4730
+# Ciclo 27935000 [MULT]: Lendo idx= 34, A=04a9, B=14ac, q=1e01, result=6538
+# Ciclo 27965000 [MULT]: Lendo idx= 35, A=1757, B=0959, q=1e01, result=3646
+# Ciclo 27995000 [MULT]: Lendo idx= 36, A=19c5, B=1727, q=1e01, result=2558
+# Ciclo 28025000 [MULT]: Lendo idx= 37, A=097c, B=06de, q=1e01, result=903
+# Ciclo 28055000 [MULT]: Lendo idx= 38, A=09a1, B=0c41, q=1e01, result=3545
+# Ciclo 28085000 [MULT]: Lendo idx= 39, A=0f24, B=11c4, q=1e01, result=2952
+# Ciclo 28115000 [MULT]: Lendo idx= 40, A=0d73, B=0881, q=1e01, result=1264
+# Ciclo 28145000 [MULT]: Lendo idx= 41, A=1a76, B=1584, q=1e01, result=5846
+# Ciclo 28175000 [MULT]: Lendo idx= 42, A=1a84, B=0177, q=1e01, result=1365
+# Ciclo 28205000 [MULT]: Lendo idx= 43, A=179a, B=1c8e, q=1e01, result=7525
+# Ciclo 28235000 [MULT]: Lendo idx= 44, A=0d66, B=0e6e, q=1e01, result=6610
+# Ciclo 28265000 [MULT]: Lendo idx= 45, A=0e8f, B=0f97, q=1e01, result=1873
+# Ciclo 28295000 [MULT]: Lendo idx= 46, A=1c2f, B=1b29, q=1e01, result=131
+# Ciclo 28325000 [MULT]: Lendo idx= 47, A=03e2, B=02dc, q=1e01, result=6712
+# Ciclo 28355000 [MULT]: Lendo idx= 48, A=0dba, B=12c0, q=1e01, result=1405
+# Ciclo 28385000 [MULT]: Lendo idx= 49, A=063f, B=0b45, q=1e01, result=2552
+# Ciclo 28415000 [MULT]: Lendo idx= 50, A=1c76, B=1772, q=1e01, result=2698
+# Ciclo 28445000 [MULT]: Lendo idx= 51, A=0b97, B=0693, q=1e01, result=5044
+# Ciclo 28475000 [MULT]: Lendo idx= 52, A=142f, B=1553, q=1e01, result=3130
+# Ciclo 28505000 [MULT]: Lendo idx= 53, A=078e, B=08b2, q=1e01, result=6839
+# Ciclo 28535000 [MULT]: Lendo idx= 54, A=1121, B=0fff, q=1e01, result=3799
+# Ciclo 28565000 [MULT]: Lendo idx= 55, A=0f28, B=0e06, q=1e01, result=4844
+# Ciclo 28595000 [MULT]: Lendo idx= 56, A=1a43, B=182a, q=1e01, result=249
+# Ciclo 28625000 [MULT]: Lendo idx= 57, A=07f4, B=05db, q=1e01, result=6584
+# Ciclo 28655000 [MULT]: Lendo idx= 58, A=07f3, B=0a0e, q=1e01, result=6979
+# Ciclo 28685000 [MULT]: Lendo idx= 59, A=11dc, B=13f7, q=1e01, result=5952
+# Ciclo 28715000 [MULT]: Lendo idx= 60, A=1310, B=11ba, q=1e01, result=6041
+# Ciclo 28745000 [MULT]: Lendo idx= 61, A=0da1, B=0c4b, q=1e01, result=4647
+# Ciclo 28775000 [MULT]: Lendo idx= 62, A=03f0, B=0548, q=1e01, result=6010
+# Ciclo 28805000 [MULT]: Lendo idx= 63, A=1765, B=18bd, q=1e01, result=2443
+# Ciclo 28835000 [MULT]: Lendo idx= 64, A=0b3c, B=0f1b, q=1e01, result=7503
+# Ciclo 28865000 [MULT]: Lendo idx= 65, A=0b0b, B=0eea, q=1e01, result=7177
+# Ciclo 28895000 [MULT]: Lendo idx= 66, A=1927, B=154a, q=1e01, result=66
+# Ciclo 28925000 [MULT]: Lendo idx= 67, A=0c98, B=08bb, q=1e01, result=768
+# Ciclo 28955000 [MULT]: Lendo idx= 68, A=0c12, B=0b15, q=1e01, result=3956
+# Ciclo 28985000 [MULT]: Lendo idx= 69, A=13ed, B=12f0, q=1e01, result=7214
+# Ciclo 29015000 [MULT]: Lendo idx= 70, A=09cf, B=0ace, q=1e01, result=2698
+# Ciclo 29045000 [MULT]: Lendo idx= 71, A=1238, B=1337, q=1e01, result=4616
+# Ciclo 29075000 [MULT]: Lendo idx= 72, A=0e4a, B=1895, q=1e01, result=1296
+# Ciclo 29105000 [MULT]: Lendo idx= 73, A=1926, B=0570, q=1e01, result=2714
+# Ciclo 29135000 [MULT]: Lendo idx= 74, A=1089, B=0640, q=1e01, result=7230
+# Ciclo 29165000 [MULT]: Lendo idx= 75, A=040d, B=17c5, q=1e01, result=3327
+# Ciclo 29195000 [MULT]: Lendo idx= 76, A=1205, B=0ea8, q=1e01, result=6472
+# Ciclo 29225000 [MULT]: Lendo idx= 77, A=12ba, B=0f5d, q=1e01, result=7565
+# Ciclo 29255000 [MULT]: Lendo idx= 78, A=076d, B=0acc, q=1e01, result=3803
+# Ciclo 29285000 [MULT]: Lendo idx= 79, A=0fda, B=1339, q=1e01, result=388
+# Ciclo 29315000 [MULT]: Lendo idx= 80, A=0876, B=0ab9, q=1e01, result=1344
+# Ciclo 29345000 [MULT]: Lendo idx= 81, A=1109, B=134c, q=1e01, result=1446
+# Ciclo 29375000 [MULT]: Lendo idx= 82, A=1cab, B=1a6a, q=1e01, result=204
+# Ciclo 29405000 [MULT]: Lendo idx= 83, A=05dc, B=039b, q=1e01, result=563
+# Ciclo 29435000 [MULT]: Lendo idx= 84, A=169b, B=056c, q=1e01, result=6240
+# Ciclo 29465000 [MULT]: Lendo idx= 85, A=0bc7, B=1899, q=1e01, result=7146
+# Ciclo 29495000 [MULT]: Lendo idx= 86, A=1d6f, B=109f, q=1e01, result=6640
+# Ciclo 29525000 [MULT]: Lendo idx= 87, A=1a36, B=0d66, q=1e01, result=4483
+# Ciclo 29555000 [MULT]: Lendo idx= 88, A=0fa6, B=1806, q=1e01, result=7133
+# Ciclo 29585000 [MULT]: Lendo idx= 89, A=1ba0, B=05ff, q=1e01, result=3675
+# Ciclo 29615000 [MULT]: Lendo idx= 90, A=0e18, B=05ba, q=1e01, result=362
+# Ciclo 29645000 [MULT]: Lendo idx= 91, A=02a8, B=184b, q=1e01, result=3892
+# Ciclo 29675000 [MULT]: Lendo idx= 92, A=16e4, B=1b2c, q=1e01, result=2856
+# Ciclo 29705000 [MULT]: Lendo idx= 93, A=1c92, B=02d9, q=1e01, result=447
+# Ciclo 29735000 [MULT]: Lendo idx= 94, A=0a39, B=05f3, q=1e01, result=7445
+# Ciclo 29765000 [MULT]: Lendo idx= 95, A=1c58, B=1812, q=1e01, result=558
+# Ciclo 29795000 [MULT]: Lendo idx= 96, A=1a8a, B=1c6f, q=1e01, result=977
+# Ciclo 29825000 [MULT]: Lendo idx= 97, A=1db2, B=0196, q=1e01, result=6220
+# Ciclo 29855000 [MULT]: Lendo idx= 98, A=1e00, B=1c1d, q=1e01, result=3069
+# Ciclo 29885000 [MULT]: Lendo idx= 99, A=03cb, B=01e8, q=1e01, result=7415
+# Ciclo 29915000 [MULT]: Lendo idx=100, A=0b24, B=05fe, q=1e01, result=3506
+# Ciclo 29945000 [MULT]: Lendo idx=101, A=1d2d, B=1807, q=1e01, result=1083
+# Ciclo 29975000 [MULT]: Lendo idx=102, A=0259, B=0781, q=1e01, result=2004
+# Ciclo 30005000 [MULT]: Lendo idx=103, A=115c, B=1684, q=1e01, result=2409
+# Ciclo 30035000 [MULT]: Lendo idx=104, A=088a, B=1593, q=1e01, result=6973
+# Ciclo 30065000 [MULT]: Lendo idx=105, A=196a, B=0872, q=1e01, result=2863
+# Ciclo 30095000 [MULT]: Lendo idx=106, A=1762, B=0a5b, q=1e01, result=1493
+# Ciclo 30125000 [MULT]: Lendo idx=107, A=02b0, B=13aa, q=1e01, result=1753
+# Ciclo 30155000 [MULT]: Lendo idx=108, A=05a1, B=1aa8, q=1e01, result=2984
+# Ciclo 30185000 [MULT]: Lendo idx=109, A=0c57, B=035d, q=1e01, result=2199
+# Ciclo 30215000 [MULT]: Lendo idx=110, A=0119, B=0a15, q=1e01, result=4365
+# Ciclo 30245000 [MULT]: Lendo idx=111, A=0af4, B=13f0, q=1e01, result=1725
+# Ciclo 30275000 [MULT]: Lendo idx=112, A=0acc, B=0492, q=1e01, result=7254
+# Ciclo 30305000 [MULT]: Lendo idx=113, A=01ac, B=1973, q=1e01, result=5184
+# Ciclo 30335000 [MULT]: Lendo idx=114, A=0ad9, B=1115, q=1e01, result=4299
+# Ciclo 30365000 [MULT]: Lendo idx=115, A=06b4, B=0cf0, q=1e01, result=1210
+# Ciclo 30395000 [MULT]: Lendo idx=116, A=1cab, B=0d9a, q=1e01, result=7127
+# Ciclo 30425000 [MULT]: Lendo idx=117, A=017b, B=106b, q=1e01, result=4711
+# Ciclo 30455000 [MULT]: Lendo idx=118, A=1745, B=0857, q=1e01, result=4211
+# Ciclo 30485000 [MULT]: Lendo idx=119, A=069b, B=15ae, q=1e01, result=5721
+# Ciclo 30515000 [MULT]: Lendo idx=120, A=1675, B=19e3, q=1e01, result=6845
+# Ciclo 30545000 [MULT]: Lendo idx=121, A=00b4, B=0422, q=1e01, result=5601
+# Ciclo 30575000 [MULT]: Lendo idx=122, A=067d, B=0311, q=1e01, result=4934
+# Ciclo 30605000 [MULT]: Lendo idx=123, A=005f, B=1af4, q=1e01, result=140
+# Ciclo 30635000 [MULT]: Lendo idx=124, A=0ef1, B=0709, q=1e01, result=7545
+# Ciclo 30665000 [MULT]: Lendo idx=125, A=00e3, B=16fc, q=1e01, result=1905
+# Ciclo 30695000 [MULT]: Lendo idx=126, A=0bb0, B=139a, q=1e01, result=6112
+# Ciclo 30725000 [MULT]: Lendo idx=127, A=0281, B=0a6b, q=1e01, result=5611
+# Ciclo 30755000 [MULT]: Lendo idx=128, A=07ad, B=0009, q=1e01, result=2323
+# Ciclo 30785000 [MULT]: Lendo idx=129, A=079f, B=1dfc, q=1e01, result=2944
+# Ciclo 30815000 [MULT]: Lendo idx=130, A=13df, B=1b85, q=1e01, result=1492
+# Ciclo 30845000 [MULT]: Lendo idx=131, A=18db, B=0280, q=1e01, result=1407
+# Ciclo 30875000 [MULT]: Lendo idx=132, A=0516, B=032c, q=1e01, result=967
+# Ciclo 30905000 [MULT]: Lendo idx=133, A=1cc3, B=1ad9, q=1e01, result=4426
+# Ciclo 30935000 [MULT]: Lendo idx=134, A=0575, B=0761, q=1e01, result=2131
+# Ciclo 30965000 [MULT]: Lendo idx=135, A=14b8, B=16a4, q=1e01, result=5600
+# Ciclo 30995000 [MULT]: Lendo idx=136, A=1135, B=0f9a, q=1e01, result=6879
+# Ciclo 31025000 [MULT]: Lendo idx=137, A=1006, B=0e6b, q=1e01, result=1666
+# Ciclo 31055000 [MULT]: Lendo idx=138, A=159c, B=1739, q=1e01, result=437
+# Ciclo 31085000 [MULT]: Lendo idx=139, A=052f, B=06cc, q=1e01, result=7539
+# Ciclo 31115000 [MULT]: Lendo idx=140, A=1cf5, B=0cc4, q=1e01, result=4495
+# Ciclo 31145000 [MULT]: Lendo idx=141, A=0371, B=1141, q=1e01, result=1710
+# Ciclo 31175000 [MULT]: Lendo idx=142, A=1dc1, B=0ff3, q=1e01, result=5423
+# Ciclo 31205000 [MULT]: Lendo idx=143, A=1be0, B=0e12, q=1e01, result=6079
+# Ciclo 31235000 [MULT]: Lendo idx=144, A=1d36, B=075b, q=1e01, result=2603
+# Ciclo 31265000 [MULT]: Lendo idx=145, A=0e84, B=16aa, q=1e01, result=2976
+# Ciclo 31295000 [MULT]: Lendo idx=146, A=1844, B=1020, q=1e01, result=3198
+# Ciclo 31325000 [MULT]: Lendo idx=147, A=1609, B=0de5, q=1e01, result=3340
+# Ciclo 31355000 [MULT]: Lendo idx=148, A=0aea, B=018e, q=1e01, result=1988
+# Ciclo 31385000 [MULT]: Lendo idx=149, A=07d2, B=1c77, q=1e01, result=1177
+# Ciclo 31415000 [MULT]: Lendo idx=150, A=083f, B=119d, q=1e01, result=417
+# Ciclo 31445000 [MULT]: Lendo idx=151, A=030a, B=0c68, q=1e01, result=10
+# Ciclo 31475000 [MULT]: Lendo idx=152, A=1444, B=1c4d, q=1e01, result=4208
+# Ciclo 31505000 [MULT]: Lendo idx=153, A=17b0, B=01b8, q=1e01, result=634
+# Ciclo 31535000 [MULT]: Lendo idx=154, A=0562, B=1b5c, q=1e01, result=2358
+# Ciclo 31565000 [MULT]: Lendo idx=155, A=0ab0, B=02a9, q=1e01, result=5165
+# Ciclo 31595000 [MULT]: Lendo idx=156, A=0b17, B=18ea, q=1e01, result=3844
+# Ciclo 31625000 [MULT]: Lendo idx=157, A=1549, B=051b, q=1e01, result=5550
+# Ciclo 31655000 [MULT]: Lendo idx=158, A=06f3, B=1723, q=1e01, result=5171
+# Ciclo 31685000 [MULT]: Lendo idx=159, A=14b3, B=06e2, q=1e01, result=2
+# Ciclo 31715000 [MULT]: Lendo idx=160, A=160e, B=14fd, q=1e01, result=4559
+# Ciclo 31745000 [MULT]: Lendo idx=161, A=0a19, B=0908, q=1e01, result=5063
+# Ciclo 31775000 [MULT]: Lendo idx=162, A=0b40, B=0c53, q=1e01, result=4027
+# Ciclo 31805000 [MULT]: Lendo idx=163, A=109f, B=11b2, q=1e01, result=7566
+# Ciclo 31835000 [MULT]: Lendo idx=164, A=0f9b, B=0601, q=1e01, result=7062
+# Ciclo 31865000 [MULT]: Lendo idx=165, A=039d, B=1804, q=1e01, result=4718
+# Ciclo 31895000 [MULT]: Lendo idx=166, A=1242, B=1bde, q=1e01, result=5942
+# Ciclo 31925000 [MULT]: Lendo idx=167, A=168c, B=0227, q=1e01, result=3920
+# Ciclo 31955000 [MULT]: Lendo idx=168, A=16dc, B=0ebe, q=1e01, result=3904
+# Ciclo 31985000 [MULT]: Lendo idx=169, A=1765, B=0f47, q=1e01, result=3584
+# Ciclo 32015000 [MULT]: Lendo idx=170, A=0bfc, B=141c, q=1e01, result=3976
+# Ciclo 32045000 [MULT]: Lendo idx=171, A=01c9, B=09e9, q=1e01, result=6892
+# Ciclo 32075000 [MULT]: Lendo idx=172, A=0064, B=147b, q=1e01, result=12
+# Ciclo 32105000 [MULT]: Lendo idx=173, A=1374, B=098a, q=1e01, result=6276
+# Ciclo 32135000 [MULT]: Lendo idx=174, A=0a1c, B=1408, q=1e01, result=2268
+# Ciclo 32165000 [MULT]: Lendo idx=175, A=0011, B=09fd, q=1e01, result=5064
+# Ciclo 32195000 [MULT]: Lendo idx=176, A=0b9d, B=0599, q=1e01, result=469
+# Ciclo 32225000 [MULT]: Lendo idx=177, A=006f, B=186c, q=1e01, result=207
+# Ciclo 32255000 [MULT]: Lendo idx=178, A=1002, B=1608, q=1e01, result=5643
+# Ciclo 32285000 [MULT]: Lendo idx=179, A=01f7, B=07fd, q=1e01, result=7190
+# Ciclo 32315000 [MULT]: Lendo idx=180, A=082e, B=1d9c, q=1e01, result=5127
+# Ciclo 32345000 [MULT]: Lendo idx=181, A=08fc, B=0069, q=1e01, result=6487
+# Ciclo 32375000 [MULT]: Lendo idx=182, A=0261, B=0af6, q=1e01, result=4918
+# Ciclo 32405000 [MULT]: Lendo idx=183, A=0a7a, B=130f, q=1e01, result=5409
+# Ciclo 32435000 [MULT]: Lendo idx=184, A=0548, B=188c, q=1e01, result=3419
+# Ciclo 32465000 [MULT]: Lendo idx=185, A=1036, B=0579, q=1e01, result=896
+# Ciclo 32495000 [MULT]: Lendo idx=186, A=186d, B=052b, q=1e01, result=7502
+# Ciclo 32525000 [MULT]: Lendo idx=187, A=0e1b, B=18da, q=1e01, result=4858
+# Ciclo 32555000 [MULT]: Lendo idx=188, A=19ed, B=0204, q=1e01, result=1458
+# Ciclo 32585000 [MULT]: Lendo idx=189, A=15e9, B=1c01, q=1e01, result=6629
+# Ciclo 32615000 [MULT]: Lendo idx=190, A=188d, B=1277, q=1e01, result=6025
+# Ciclo 32645000 [MULT]: Lendo idx=191, A=11a4, B=0b8e, q=1e01, result=753
+# Ciclo 32675000 [MULT]: Lendo idx=192, A=0579, B=07d8, q=1e01, result=6929
+# Ciclo 32705000 [MULT]: Lendo idx=193, A=13ce, B=162d, q=1e01, result=4405
+# Ciclo 32735000 [MULT]: Lendo idx=194, A=10d9, B=0e7c, q=1e01, result=1820
+# Ciclo 32765000 [MULT]: Lendo idx=195, A=11e6, B=0f89, q=1e01, result=3606
+# Ciclo 32795000 [MULT]: Lendo idx=196, A=14ea, B=17c4, q=1e01, result=2344
+# Ciclo 32825000 [MULT]: Lendo idx=197, A=0367, B=0641, q=1e01, result=2853
+# Ciclo 32855000 [MULT]: Lendo idx=198, A=0aa3, B=07cb, q=1e01, result=4666
+# Ciclo 32885000 [MULT]: Lendo idx=199, A=1912, B=163a, q=1e01, result=7187
+# Ciclo 32915000 [MULT]: Lendo idx=200, A=13fb, B=0b02, q=1e01, result=238
+# Ciclo 32945000 [MULT]: Lendo idx=201, A=1bfc, B=1303, q=1e01, result=2036
+# Ciclo 32975000 [MULT]: Lendo idx=202, A=0ce0, B=15db, q=1e01, result=2461
+# Ciclo 33005000 [MULT]: Lendo idx=203, A=1d30, B=082a, q=1e01, result=3550
+# Ciclo 33035000 [MULT]: Lendo idx=204, A=1183, B=1546, q=1e01, result=4302
+# Ciclo 33065000 [MULT]: Lendo idx=205, A=04fc, B=08bf, q=1e01, result=511
+# Ciclo 33095000 [MULT]: Lendo idx=206, A=0b85, B=07c4, q=1e01, result=6865
+# Ciclo 33125000 [MULT]: Lendo idx=207, A=1a02, B=1641, q=1e01, result=4732
+# Ciclo 33155000 [MULT]: Lendo idx=208, A=09d9, B=1682, q=1e01, result=4141
+# Ciclo 33185000 [MULT]: Lendo idx=209, A=18db, B=0783, q=1e01, result=267
+# Ciclo 33215000 [MULT]: Lendo idx=210, A=0f12, B=026b, q=1e01, result=5763
+# Ciclo 33245000 [MULT]: Lendo idx=211, A=0a40, B=1b9a, q=1e01, result=6265
+# Ciclo 33275000 [MULT]: Lendo idx=212, A=1379, B=12f5, q=1e01, result=1740
+# Ciclo 33305000 [MULT]: Lendo idx=213, A=0b94, B=0b10, q=1e01, result=5440
+# Ciclo 33335000 [MULT]: Lendo idx=214, A=0ca0, B=0d26, q=1e01, result=4024
+# Ciclo 33365000 [MULT]: Lendo idx=215, A=1059, B=10df, q=1e01, result=6529
+# Ciclo 33395000 [MULT]: Lendo idx=216, A=0404, B=180e, q=1e01, result=563
+# Ciclo 33425000 [MULT]: Lendo idx=217, A=0fee, B=05f7, q=1e01, result=1186
+# Ciclo 33455000 [MULT]: Lendo idx=218, A=0a0d, B=1406, q=1e01, result=1100
+# Ciclo 33485000 [MULT]: Lendo idx=219, A=0006, B=09ff, q=1e01, result=7673
+# Ciclo 33515000 [MULT]: Lendo idx=220, A=052d, B=0512, q=1e01, result=552
+# Ciclo 33545000 [MULT]: Lendo idx=221, A=190e, B=18f3, q=1e01, result=6218
+# Ciclo 33575000 [MULT]: Lendo idx=222, A=05b0, B=05cd, q=1e01, result=3560
+# Ciclo 33605000 [MULT]: Lendo idx=223, A=181b, B=1838, q=1e01, result=6626
+# Ciclo 33635000 [MULT]: Lendo idx=224, A=0153, B=187d, q=1e01, result=4996
+# Ciclo 33665000 [MULT]: Lendo idx=225, A=0c5f, B=0588, q=1e01, result=4981
+# Ciclo 33695000 [MULT]: Lendo idx=226, A=1085, B=175e, q=1e01, result=982
+# Ciclo 33725000 [MULT]: Lendo idx=227, A=1dcf, B=06a7, q=1e01, result=4103
+# Ciclo 33755000 [MULT]: Lendo idx=228, A=018e, B=14f4, q=1e01, result=6996
+# Ciclo 33785000 [MULT]: Lendo idx=229, A=13ac, B=0911, q=1e01, result=105
+# Ciclo 33815000 [MULT]: Lendo idx=230, A=00a1, B=0b3e, q=1e01, result=4606
+# Ciclo 33845000 [MULT]: Lendo idx=231, A=082a, B=12c7, q=1e01, result=4260
+# Ciclo 33875000 [MULT]: Lendo idx=232, A=14de, B=007b, q=1e01, result=1706
+# Ciclo 33905000 [MULT]: Lendo idx=233, A=13ec, B=1d8a, q=1e01, result=308
+# Ciclo 33935000 [MULT]: Lendo idx=234, A=00d4, B=1539, q=1e01, result=6960
+# Ciclo 33965000 [MULT]: Lendo idx=235, A=1268, B=08cc, q=1e01, result=6361
+# Ciclo 33995000 [MULT]: Lendo idx=236, A=00c2, B=0344, q=1e01, result=388
+# Ciclo 34025000 [MULT]: Lendo idx=237, A=183f, B=1ac1, q=1e01, result=6010
+# Ciclo 34055000 [MULT]: Lendo idx=238, A=16c4, B=1444, q=1e01, result=525
+# Ciclo 34085000 [MULT]: Lendo idx=239, A=0c41, B=09c1, q=1e01, result=3581
+# Ciclo 34115000 [MULT]: Lendo idx=240, A=09c9, B=0ffa, q=1e01, result=6472
+# Ciclo 34145000 [MULT]: Lendo idx=241, A=07da, B=0e0b, q=1e01, result=1628
+# Ciclo 34175000 [MULT]: Lendo idx=242, A=14f2, B=0ec3, q=1e01, result=4693
+# Ciclo 34205000 [MULT]: Lendo idx=243, A=1571, B=0f42, q=1e01, result=2081
+# Ciclo 34235000 [MULT]: Lendo idx=244, A=072a, B=1195, q=1e01, result=1386
+# Ciclo 34265000 [MULT]: Lendo idx=245, A=0205, B=0c70, q=1e01, result=47
+# Ciclo 34295000 [MULT]: Lendo idx=246, A=1894, B=0e2b, q=1e01, result=6875
+# Ciclo 34325000 [MULT]: Lendo idx=247, A=1a43, B=0fda, q=1e01, result=3596
+# Ciclo 34355000 [MULT]: Lendo idx=248, A=0b1c, B=0f93, q=1e01, result=1300
+# Ciclo 34385000 [MULT]: Lendo idx=249, A=09fb, B=0e72, q=1e01, result=3525
+# Ciclo 34415000 [MULT]: Lendo idx=250, A=002b, B=19b7, q=1e01, result=5563
+# Ciclo 34445000 [MULT]: Lendo idx=251, A=08c3, B=044e, q=1e01, result=868
+# Ciclo 34475000 [MULT]: Lendo idx=252, A=08fc, B=099a, q=1e01, result=1942
+# Ciclo 34505000 [MULT]: Lendo idx=253, A=13cd, B=146b, q=1e01, result=3757
+# Ciclo 34535000 [MULT]: Lendo idx=254, A=0930, B=0894, q=1e01, result=7098
+# Ciclo 34565000 [MULT]: Lendo idx=255, A=160d, B=1571, q=1e01, result=6327
+# TB: Sinal 'done_all' recebido!
+# --- VERIFICAÇÃO DO RESULTADO C = A * B ---
+# C[0] = 2
+# C[0] = 6
+# C[0] = 10
+# C[0] = 6
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 0
+# C[0] = 2 -> CORRETO
+# C[1] = 6 -> INCORRETO (Esperado: 4)
+# C[2] = 10 -> INCORRETO (Esperado: 6)
+# C[3] = 6 -> INCORRETO (Esperado: 0)
+# ==================== TESTE FALHOU! (3 erros) ====================
+# Break in Module NTT_PolyMul_test_v2 at C:/users/crossover/Documents/NTT-Parametric/NTT_PolyMul_test_v2.v line 194

@@ -1,0 +1,358 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/altera/Projeto_NTT/ --output-directory=C:/altera/Projeto_NTT/de2i_150_qsys/ --report-file=bsf:C:/altera/Projeto_NTT/de2i_150_qsys.bsf --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=EP4CGX150DF31C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=C:/altera/Projeto_NTT/de2i_150_qsys.qsys
+Progress: Loading Projeto_NTT/de2i_150_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 12.1]
+Warning: clk_50: Used clock_source 13.0 (instead of 12.1)
+Progress: Parameterizing module clk_50
+Progress: Adding pcie_ip [altera_pcie_hard_ip 12.1]
+Warning: pcie_ip: Used altera_pcie_hard_ip 13.0 (instead of 12.1)
+Progress: Parameterizing module pcie_ip
+Progress: Adding sgdma [altera_avalon_sgdma 12.1]
+Warning: sgdma: Used altera_avalon_sgdma 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module sgdma
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 12.1]
+Warning: onchip_memory: Used altera_avalon_onchip_memory2 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module onchip_memory
+Progress: Adding nios2 [altera_nios2_qsys 12.1]
+Warning: nios2: Used altera_nios2_qsys 13.0 (instead of 12.1)
+Progress: Parameterizing module nios2
+Progress: Adding led [altera_avalon_pio 12.1]
+Warning: led: Used altera_avalon_pio 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module led
+Progress: Adding button [altera_avalon_pio 12.1]
+Warning: button: Used altera_avalon_pio 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module button
+Progress: Adding fifo_memory [altera_avalon_fifo 12.1]
+Warning: fifo_memory: Used altera_avalon_fifo 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module fifo_memory
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: de2i_150_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
+Info: de2i_150_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
+Warning: de2i_150_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 13.0)
+Warning: de2i_150_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 13.0), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 13.0)
+Info: de2i_150_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
+Info: de2i_150_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip.test_out_export: Interface has no signals
+Info: de2i_150_qsys.pcie_ip.altgx_internal: Family: Cyclone IV GX
+Info: de2i_150_qsys.pcie_ip.altgx_internal: Lanes: 1
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.pcie_core_clk cannot be both connected and exported
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_analogreset must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_digitalreset must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_deemph_0 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_margin_0 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.test_out_export must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.pll_powerdown_pcs must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitch_pcs must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitchbaseclock_pcs must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_2 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_3 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_4 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_5 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_6 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_7 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_8 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_9 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.reset_controller_internal: reset_controller_internal.reset_n_out cannot be both connected and exported
+Info: de2i_150_qsys.button: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: de2i_150_qsys.fifo_memory: The Nios II HAL drivers for the Altera Avalon FIFO support only 32-bit data width.
+        If you connect this FIFO to a Nios II CPU, you will need to access the registers directly.
+Warning: de2i_150_qsys.pcie_ip: pcie_ip.powerdown must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip: Interrupt sender pcie_ip.cra_irq is not connected to an interrupt receiver
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/altera/Projeto_NTT/ --output-directory=C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:C:/altera/Projeto_NTT/de2i_150_qsys.sopcinfo --report-file=html:C:/altera/Projeto_NTT/de2i_150_qsys.html --report-file=qip:C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/de2i_150_qsys.qip --report-file=cmp:C:/altera/Projeto_NTT/de2i_150_qsys.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=EP4CGX150DF31C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=C:/altera/Projeto_NTT/de2i_150_qsys.qsys --language=VERILOG
+Progress: Loading Projeto_NTT/de2i_150_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 12.1]
+Warning: clk_50: Used clock_source 13.0 (instead of 12.1)
+Progress: Parameterizing module clk_50
+Progress: Adding pcie_ip [altera_pcie_hard_ip 12.1]
+Warning: pcie_ip: Used altera_pcie_hard_ip 13.0 (instead of 12.1)
+Progress: Parameterizing module pcie_ip
+Progress: Adding sgdma [altera_avalon_sgdma 12.1]
+Warning: sgdma: Used altera_avalon_sgdma 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module sgdma
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 12.1]
+Warning: onchip_memory: Used altera_avalon_onchip_memory2 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module onchip_memory
+Progress: Adding nios2 [altera_nios2_qsys 12.1]
+Warning: nios2: Used altera_nios2_qsys 13.0 (instead of 12.1)
+Progress: Parameterizing module nios2
+Progress: Adding led [altera_avalon_pio 12.1]
+Warning: led: Used altera_avalon_pio 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module led
+Progress: Adding button [altera_avalon_pio 12.1]
+Warning: button: Used altera_avalon_pio 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module button
+Progress: Adding fifo_memory [altera_avalon_fifo 12.1]
+Warning: fifo_memory: Used altera_avalon_fifo 13.0.1.99.2 (instead of 12.1)
+Progress: Parameterizing module fifo_memory
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: de2i_150_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
+Info: de2i_150_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
+Warning: de2i_150_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 13.0)
+Warning: de2i_150_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 13.0), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 13.0)
+Info: de2i_150_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
+Info: de2i_150_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip.test_out_export: Interface has no signals
+Info: de2i_150_qsys.pcie_ip.altgx_internal: Family: Cyclone IV GX
+Info: de2i_150_qsys.pcie_ip.altgx_internal: Lanes: 1
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.pcie_core_clk cannot be both connected and exported
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_analogreset must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_digitalreset must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_deemph_0 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_margin_0 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.test_out_export must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.pll_powerdown_pcs must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitch_pcs must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitchbaseclock_pcs must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_2 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_3 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_4 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_5 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_6 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_7 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_8 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_9 must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip.reset_controller_internal: reset_controller_internal.reset_n_out cannot be both connected and exported
+Info: de2i_150_qsys.button: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: de2i_150_qsys.fifo_memory: The Nios II HAL drivers for the Altera Avalon FIFO support only 32-bit data width.
+        If you connect this FIFO to a Nios II CPU, you will need to access the registers directly.
+Warning: de2i_150_qsys.pcie_ip: pcie_ip.powerdown must be exported, or connected to a matching conduit.
+Warning: de2i_150_qsys.pcie_ip: Interrupt sender pcie_ip.cra_irq is not connected to an interrupt receiver
+Info: de2i_150_qsys: Generating de2i_150_qsys "de2i_150_qsys" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 8 modules, 55 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 27 modules, 142 connections
+Info: merlin_domain_transform: After transform: 60 modules, 388 connections
+Info: merlin_router_transform: After transform: 79 modules, 475 connections
+Info: merlin_traffic_limiter_transform: After transform: 82 modules, 489 connections
+Info: merlin_burst_transform: After transform: 90 modules, 527 connections
+Info: reset_adaptation_transform: After transform: 92 modules, 365 connections
+Info: merlin_network_to_switch_transform: After transform: 127 modules, 443 connections
+Info: merlin_width_transform: After transform: 143 modules, 491 connections
+Info: limiter_update_transform: After transform: 143 modules, 494 connections
+Info: merlin_mm_transform: After transform: 143 modules, 494 connections
+Info: merlin_interrupt_mapper_transform: After transform: 145 modules, 500 connections
+Info: merlin_interrupt_fanout_transform: After transform: 146 modules, 503 connections
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: de2i_150_qsys: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info: pipeline_bridge_swap_transform: After transform: 10 modules, 64 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 10 modules, 64 connections
+Info: reset_adaptation_transform: After transform: 11 modules, 66 connections
+Info: merlin_mm_transform: After transform: 11 modules, 66 connections
+Info: pcie_ip: "de2i_150_qsys" instantiated altera_pcie_hard_ip "pcie_ip"
+Info: sgdma: Starting RTL generation for module 'de2i_150_qsys_sgdma'
+Info: sgdma:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=de2i_150_qsys_sgdma --dir=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0002_sgdma_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0002_sgdma_gen//de2i_150_qsys_sgdma_component_configuration.pl  --do_build_sim=0  ]
+Info: sgdma: Done RTL generation for module 'de2i_150_qsys_sgdma'
+Info: sgdma: "de2i_150_qsys" instantiated altera_avalon_sgdma "sgdma"
+Info: onchip_memory: Starting RTL generation for module 'de2i_150_qsys_onchip_memory'
+Info: onchip_memory:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=de2i_150_qsys_onchip_memory --dir=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0003_onchip_memory_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0003_onchip_memory_gen//de2i_150_qsys_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory: Done RTL generation for module 'de2i_150_qsys_onchip_memory'
+Info: onchip_memory: "de2i_150_qsys" instantiated altera_avalon_onchip_memory2 "onchip_memory"
+Info: nios2: Starting RTL generation for module 'de2i_150_qsys_nios2'
+Info: nios2:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=de2i_150_qsys_nios2 --dir=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0004_nios2_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0004_nios2_gen//de2i_150_qsys_nios2_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: nios2: # 2025.10.25 15:54:16 (*) Starting Nios II generation
+Info: nios2: # 2025.10.25 15:54:16 (*)   Checking for plaintext license.
+Info: nios2: # 2025.10.25 15:54:17 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: nios2: # 2025.10.25 15:54:17 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2: # 2025.10.25 15:54:17 (*)   LM_LICENSE_FILE environment variable is empty
+Info: nios2: # 2025.10.25 15:54:17 (*)   Plaintext license not found.
+Info: nios2: # 2025.10.25 15:54:17 (*)   No license required to generate encrypted Nios II/e.
+Info: nios2: # 2025.10.25 15:54:17 (*)   Elaborating CPU configuration settings
+Info: nios2: # 2025.10.25 15:54:17 (*)   Creating all objects for CPU
+Info: nios2: # 2025.10.25 15:54:19 (*)   Generating RTL from CPU objects
+Info: nios2: # 2025.10.25 15:54:19 (*)   Creating plain-text RTL
+Info: nios2: # 2025.10.25 15:54:24 (*) Done Nios II generation
+Info: nios2: Done RTL generation for module 'de2i_150_qsys_nios2'
+Info: nios2: "de2i_150_qsys" instantiated altera_nios2_qsys "nios2"
+Info: led: Starting RTL generation for module 'de2i_150_qsys_led'
+Info: led:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=de2i_150_qsys_led --dir=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0005_led_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0005_led_gen//de2i_150_qsys_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led: Done RTL generation for module 'de2i_150_qsys_led'
+Info: led: "de2i_150_qsys" instantiated altera_avalon_pio "led"
+Info: button: Starting RTL generation for module 'de2i_150_qsys_button'
+Info: button:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=de2i_150_qsys_button --dir=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0006_button_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0006_button_gen//de2i_150_qsys_button_component_configuration.pl  --do_build_sim=0  ]
+Info: button: Done RTL generation for module 'de2i_150_qsys_button'
+Info: button: "de2i_150_qsys" instantiated altera_avalon_pio "button"
+Info: fifo_memory: Starting RTL generation for module 'de2i_150_qsys_fifo_memory'
+Info: fifo_memory:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=de2i_150_qsys_fifo_memory --dir=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0007_fifo_memory_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RONALD~1/AppData/Local/Temp/alt0386_6167781737385444117.dir/0007_fifo_memory_gen//de2i_150_qsys_fifo_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: fifo_memory: Done RTL generation for module 'de2i_150_qsys_fifo_memory'
+Info: fifo_memory: "de2i_150_qsys" instantiated altera_avalon_fifo "fifo_memory"
+Info: nios2_instruction_master_translator: "de2i_150_qsys" instantiated altera_merlin_master_translator "nios2_instruction_master_translator"
+Info: nios2_jtag_debug_module_translator: "de2i_150_qsys" instantiated altera_merlin_slave_translator "nios2_jtag_debug_module_translator"
+Info: nios2_instruction_master_translator_avalon_universal_master_0_agent: "de2i_150_qsys" instantiated altera_merlin_master_agent "nios2_instruction_master_translator_avalon_universal_master_0_agent"
+Info: nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent: "de2i_150_qsys" instantiated altera_merlin_slave_agent "nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "de2i_150_qsys" instantiated altera_avalon_sc_fifo "nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "de2i_150_qsys" instantiated altera_merlin_router "addr_router"
+Info: id_router: "de2i_150_qsys" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "de2i_150_qsys" instantiated altera_merlin_router "id_router_001"
+Info: addr_router_002: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_002"
+Info: addr_router_003: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_003"
+Info: addr_router_004: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_004"
+Info: addr_router_005: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_005"
+Info: id_router_002: "de2i_150_qsys" instantiated altera_merlin_router "id_router_002"
+Info: id_router_003: "de2i_150_qsys" instantiated altera_merlin_router "id_router_003"
+Info: id_router_006: "de2i_150_qsys" instantiated altera_merlin_router "id_router_006"
+Info: id_router_007: "de2i_150_qsys" instantiated altera_merlin_router "id_router_007"
+Info: id_router_008: "de2i_150_qsys" instantiated altera_merlin_router "id_router_008"
+Info: addr_router_007: "de2i_150_qsys" instantiated altera_merlin_router "addr_router_007"
+Info: id_router_009: "de2i_150_qsys" instantiated altera_merlin_router "id_router_009"
+Info: limiter: "de2i_150_qsys" instantiated altera_merlin_traffic_limiter "limiter"
+Info: burst_adapter: "de2i_150_qsys" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: rst_controller: "de2i_150_qsys" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_mux: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_demux_002: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_002"
+Info: cmd_xbar_demux_003: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_003"
+Info: cmd_xbar_demux_004: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_004"
+Info: cmd_xbar_demux_005: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_005"
+Info: cmd_xbar_mux_002: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_mux_006: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux_006"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_mux_008: "de2i_150_qsys" instantiated altera_merlin_multiplexer "cmd_xbar_mux_008"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux_006: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_006"
+Info: rsp_xbar_demux_008: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_008"
+Info: rsp_xbar_mux_002: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux_002"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_003: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux_003"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_demux_007: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_007"
+Info: rsp_xbar_demux_009: "de2i_150_qsys" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_009"
+Info: rsp_xbar_mux_007: "de2i_150_qsys" instantiated altera_merlin_multiplexer "rsp_xbar_mux_007"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: width_adapter: "de2i_150_qsys" instantiated altera_merlin_width_adapter "width_adapter"
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/altera/Projeto_NTT/de2i_150_qsys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: irq_mapper: "de2i_150_qsys" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_mapper_001: "de2i_150_qsys" instantiated altera_irq_mapper "irq_mapper_001"
+Info: pcie_internal_hip: "pcie_ip" instantiated altera_pcie_internal_hard_ip_qsys "pcie_internal_hip"
+Info: altgx_internal: Family: Cyclone IV GX
+Info: altgx_internal: Subprotocol: Gen 1-x1
+Info: altgx_internal: qmegawiz -silent module=alt_c3gxb LOCKDOWN_EXCL=PCIE IP_MODE=PCIE_HIP_8 gxb_analog_power=AUTO tx_analog_power=AUTO elec_idle_infer_enable=false tx_allow_polarity_inversion=false rx_cdrctrl_enable=true hip_tx_clkout rx_elecidleinfersel fixedclk enable_0ppm=false pll_powerdown intended_device_family=cycloneiv starting_channel_number=84   deviceFamily="Cyclone IV GX"  wiz_subprotocol="Gen 1-x1"  OPTIONAL_FILES=NONE de2i_150_qsys_pcie_ip_altgx_internal.v
+Info: altgx_internal: "pcie_ip" instantiated altera_pcie_internal_altgx "altgx_internal"
+Info: reset_controller_internal: "pcie_ip" instantiated altera_pcie_internal_reset_controller_qsys "reset_controller_internal"
+Info: pipe_interface_internal: "pcie_ip" instantiated altera_pcie_internal_pipe_interface_qsys "pipe_interface_internal"
+Info: de2i_150_qsys: Done de2i_150_qsys" with 54 modules, 240 files, 6081268 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
