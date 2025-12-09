@@ -1,5 +1,5 @@
 ## Overview
-This work is based on the research developed by **Tancrède Lepoint (2017)**. It proposes and implements an optimized Number Theoretic Transform (NTT) applying the modular reduction technique described by **Longa and Naehrig (2016)** for the modulus **q = 12289**.
+This work is based on the research developed by **Tancrède Lepoint (2017)** and available at https://github.com/SRI-CSL/Bliss/tree/master. It proposes and implements an optimized Number Theoretic Transform (NTT) applying the modular reduction technique described by **Longa and Naehrig (2016)** for the modulus **q = 12289**.
 
 ## Project Structure
 The software is organized into the following modules:
