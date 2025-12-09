@@ -23,14 +23,6 @@ And:
 If you utilize only the baseline NTT/INTT modules, please cite only the original work:
 
 ```bibtex
-@mastersthesis{Silva2025,
-  author={Ronald G. F. {Silva} and Marco A. {Henriques}},
-  title={Implementation and Analysis of a Polynomial Product Accelerator on FPGA Based on the Number Theoretic Transform (NTT)},
-  school={University of Campinas (UNICAMP)},
-  type={Bachelor's Thesis},
-  address={Campinas, SP, Brazil},
-  year={2025}
-}
 
 @ARTICLE{9171507,
   author={A. C. {Mert} and E. {Karabulut} and E. {Ozturk} and E. {Savas} and A. {Aysu}},
