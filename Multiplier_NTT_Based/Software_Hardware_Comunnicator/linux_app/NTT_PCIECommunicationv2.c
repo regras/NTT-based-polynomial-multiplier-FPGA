@@ -14,9 +14,8 @@
 #define FIFO_OUT_ID 0x80
 
 // Endereços dos Registradores de Controle/Status (na BAR0)
-// (Baseado no seu código anterior)
-#define ADDR_CONTROL 0x00 // Usando o endereço antigo do LED
-#define ADDR_STATUS  0x20 // Usando o endereço antigo do FIFO_STATUS
+#define ADDR_CONTROL 0x00 
+#define ADDR_STATUS  0x20 
 
 // Máscaras de bits para os registradores
 #define CONTROL_START_BIT (1 << 0)
@@ -24,17 +23,15 @@
 
 #define STATUS_BUSY_MASK  (1 << 0)
 #define STATUS_DONE_MASK  (1 << 1)
-// NOTA: Os sinais 'fifo_full'/'fifo_empty' são lidos pela API DMA,
-// mas o 'busy' e 'done' são lidos por nós.
 
-// Parâmetros do seu 'defines.v'
+// Parâmetros do 'defines.v'
 #define N 256
-#define RING_DEPTH 8 // ===> LOG(N)b2
+#define RING_DEPTH 8 // ===> LOG(N)b'
 #define PE_DEPTH 3 // ====> LOG(PE_NUMBER)b2 , PE_NUMBER = 8
-// Quantos ciclos W e W_INV têm (baseado no 'defines.v')
+
 
 #define W_COUNT ((((1<<(RING_DEPTH-PE_DEPTH))-1)+PE_DEPTH)<<PE_DEPTH)
-// (Se W_COUNT for complexo, defina-o como um número fixo, ex: 384)
+
 #define DEMO_PCIE_USER_BAR			PCIE_BAR0
 // =========================================================================
 // FUNÇÕES HELPER (Abstração do Protocolo)
@@ -59,9 +56,7 @@ void SendCommand(PCIE_HANDLE hPCIe, int mode) {
 BOOL WaitForBusyClear(PCIE_HANDLE hPCIe) {
     DWORD status = 0;
 
-    // Timeout deve ser muito maior agora,
-    // porque o loop roda milhões de vezes por segundo.
-    long long timeout = 50 * 1000 * 1000;  // ~50 milhões de leituras (~0.1–0.3s)
+    long long timeout = 50 * 1000 * 1000; 
     
     printf("...aguardando 'busy' (FSM) ficar livre...\n");
 
@@ -88,15 +83,14 @@ BOOL WaitForBusyClear(PCIE_HANDLE hPCIe) {
 BOOL WaitForDoneAll(PCIE_HANDLE hPCIe) {
     DWORD status = 0;
 
-    // O timeout precisa ser maior, pois sem usleep o loop roda muito rápido
-    long long timeout = 2500000;  // ~2.5 milhões de leituras ≈ ~5 segundos reais
+    long long timeout = 2500000;  
 
     printf("...aguardando 'done_all' (FSM) ficar alto...\n");
 
     while (1) {
         PCIE_Read32(hPCIe, DEMO_PCIE_USER_BAR, ADDR_STATUS, &status);
 
-        // Se o bit subiu, pronto
+        // Se o bit subiu, retorna
         if (status & STATUS_DONE_MASK)
             return TRUE;
 
@@ -110,7 +104,7 @@ BOOL WaitForDoneAll(PCIE_HANDLE hPCIe) {
 
 
 // =========================================================================
-// FUNÇÃO PRINCIPAL DE EXECUÇÃO (v3 - Baseada em FIFO DMA)
+// FUNÇÃO PRINCIPAL DE EXECUÇÃO
 // =========================================================================
 BOOL NTT_HARDWARE_EXE(PCIE_HANDLE hPCIe) {
     BOOL bPass = TRUE;
@@ -258,7 +252,7 @@ cleanup:
 }
 
 // =========================================================================
-// MAIN (Seu código original, mas chamando a nova função)
+// MAIN
 // =========================================================================
 int main(void)
 {

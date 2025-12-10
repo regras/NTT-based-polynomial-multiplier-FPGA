@@ -26,13 +26,11 @@ typedef unsigned int DWORD;
 extern void generate_params(int *psi, int *psi_inv, int *w, int *w_inv, int *R, int *n_inv, int *PE, int *q);
 // extern void generate_twiddles(uint32_t* pW, uint32_t* pW_INV, int w, int w_inv, int q, int R);
 
-// ... (Restante das definições de endereços SGDMA/RAM/Wrapper) ...
-
 // =========================================================================
 // DEFINIÇÕES DE HARDWARE (AJUSTAR NO SEU QSYS)
 // =========================================================================
 
-// Os endereços abaixo DEVEM ser ajustados conforme o mapa de endereços do seu QSys.
+// Os endereços assim como no QSys.
 #define DEMO_PCIE_USER_BAR      PCIE_BAR0
 
 // Base do Wrapper (Controle/Status do Verilog)
@@ -41,11 +39,11 @@ extern void generate_params(int *psi, int *psi_inv, int *w, int *w_inv, int *R, 
 #define ADDR_STATUS             (WRAPPER_BASE_ADDR + 0x04) // 4'h4 * 4 bytes/palavra
 
 // Offsets dos CSRs da SGDMA (Control and Status Registers)
-#define SGDMA_TX_CSR_ADDR       0x4040 // Exemplo: Base do CSR do SGDMA_MEM_TO_STREAM
-#define SGDMA_RX_CSR_ADDR       0x4000 // Exemplo: Base do CSR do SGDMA_STREAM_TO_MEM
+#define SGDMA_TX_CSR_ADDR       0x4040
+#define SGDMA_RX_CSR_ADDR       0x4000 
 
 // Endereços na RAM On-Chip (acessível via PCIe BAR0)
-#define ONCHIP_RAM_BASE_ADDR    0x20000 // Exemplo: Base da sua On-Chip RAM
+#define ONCHIP_RAM_BASE_ADDR    0x20000 
 #define ONCHIP_RAM_DESC_BASE_ADDR   0x60000
 
 // Definições de buffers na RAM On-Chip (Offsets a partir da ONCHIP_RAM_BASE_ADDR)
@@ -121,7 +119,7 @@ extern void generate_params(int *psi, int *psi_inv, int *w, int *w_inv, int *R, 
 #define STATUS_BUSY_MASK    (1 << 0)    // Bit 0: O sistema está ocupado
 #define STATUS_DONE_MASK    (1 << 1)    // Bit 1: O processamento completo terminou
 
-// Parâmetros do seu 'defines.v'
+// Parâmetros do 'defines.v'
 #define N 256
 #define RING_DEPTH 8 
 #define PE_DEPTH 3 
@@ -137,7 +135,7 @@ extern void generate_params(int *psi, int *psi_inv, int *w, int *w_inv, int *R, 
 #define TEST_DESC_TX_ADDR       (ONCHIP_RAM_BASE_ADDR + 0x0)  // Descritor TX (MMIO)
 #define TEST_DESC_RX_ADDR       (ONCHIP_RAM_BASE_ADDR + 0x20) // Descritor RX (MMIO)
 
-// Use as suas mascaras de controle
+// usando a mascaras de controle
 #define SGDMA_TX_FLAGS          (SGDMA_CONTROL_RUN_MASK | SGDMA_DESCRIPTOR_EOP_MASK)
 #define SGDMA_RX_FLAGS          (SGDMA_CONTROL_RUN_MASK | SGDMA_DESCRIPTOR_EOP_MASK)
 #define SGDMA_CONTROL_RESET_MASK  0x00000002
@@ -205,8 +203,6 @@ BOOL pcie_read_buffer(PCIE_HANDLE hPCIe, int bar_index, DWORD local_addr, void *
     return TRUE;
 }
 
-// ... (Restante das funções auxiliares SendCommand, WaitForBusyClear, WaitForDoneAll, setup_sgdma_descriptor, WaitForSgDmaDone) ...
-// (Para fins de concisão, estas funções são mantidas como na resposta anterior, mas DEVE-SE incluí-las no código final)
 
 // =========================================================================
 // FUNÇÕES HELPER (Controle do Wrapper Verilog) - INÍCIO
@@ -256,21 +252,13 @@ BOOL WaitForDoneAll(PCIE_HANDLE hPCIe) {
 // FUNÇÕES HELPER (Controle do SGDMA) - INÍCIO
 // =========================================================================
 
-// --- (As seguintes macros DEVERIAM estar definidas no seu arquivo) ---
-// #define ONCHIP_RAM_BASE_ADDR    0x20000 // Endereço de base da RAM para o HOST
-// #define DEMO_PCIE_USER_BAR      PCIE_BAR0
-// typedef unsigned int DWORD;
 
-// =========================================================================
-// FUNÇÃO CORRIGIDA: SEM TRADUÇÃO DE ENDEREÇO
-// =========================================================================
 BOOL setup_sgdma_descriptor(PCIE_HANDLE hPCIe, DWORD desc_addr_mmio, 
                             DWORD source_addr_mmio, 
                             DWORD dest_addr_mmio, 
                             DWORD length, DWORD control_flags)
 {
-    // NENHUMA TRADUÇÃO DE ENDEREÇO É NECESSÁRIA. 
-    // O SGDMA VÊ A RAM NO MESMO ENDEREÇO QUE O HOST (0x20000 + offset).
+
     uint32_t sgdma_source_addr = source_addr_mmio;
     uint32_t sgdma_dest_addr = dest_addr_mmio;
     uint32_t next_desc_sgdma = 0x00000000; 
@@ -552,13 +540,12 @@ BOOL NTT_HARDWARE_EXE(PCIE_HANDLE hPCIe) {
     printf("Forcando o bit RUN no SGDMA TX (CSR 0x%X + 0x00)...\n", SGDMA_TX_CSR_ADDR);
 
     // Escreve a mascara RUN no registrador de controle (Offset 0x00).
-    // Isso coloca o SGDMA no modo operacional.
+    // coloca o SGDMA no modo operacional.
     if (!PCIE_Write32(hPCIe, DEMO_PCIE_USER_BAR, 
                     SGDMA_TX_CSR_ADDR + SGDMA_CSR_CONTROL, 
                     SGDMA_CONTROL_RUN_MASK)) 
     {
         printf("ERRO: Falha ao escrever o bit RUN no SGDMA TX.\n");
-        // Tratar erro (goto cleanup)
     }
 
     uint32_t desc_addr_para_sgdma_csr = TX_DESC_ADDR - ONCHIP_RAM_BASE_ADDR;
@@ -655,9 +642,7 @@ cleanup:
     return bPass;
 }
 
-// =========================================================================
-// MAIN
-// =========================================================================
+
 
 int main(void)
 {

@@ -23,8 +23,7 @@ typedef enum{
 	MENU_BUTTON,
 	MENU_DMA_MEMORY,
 	MENU_DMA_FIFO,
-    // --- Nossos Novos Testes ---
-	MENU_LOOPBACK_PIO,  // Teste de Registradores (LED -> Button)
+	MENU_LOOPBACK_PIO, 
 	MENU_LOOPBACK_DMA,
     MENU_LOOPBACK_PIO_FLOW,  // Teste de Streaming (FIFO In -> FIFO Out)
 	MENU_QUIT = 99
@@ -45,12 +44,9 @@ BOOL TEST_PIO_FIFO_FLOW(PCIE_HANDLE hPCIe) {
     printf("Transferindo %d palavras (32-bit) via PIO...\r\n", PIO_TEST_WORDS);
 
     // O teste PIO nao usa os enderecos de controle (0x40/0x80)
-    // Ele precisa escrever no ENDERECO DO DATA REGISTER da FIFO.
-    // Como assumimos que o SGDMA esta inativo, vamos usar o endereco 0x40/0x80
-    // como sendo o endereço do Data Register da FIFO, caso o Qsys os tenha 
-    // mapeado para um registrador simples. 
-    const PCIE_LOCAL_ADDRESS FIFO_WRITE_DATA_ADDR = DEMO_PCIE_FIFO_WRITE_ADDR; // Tentativa 1: 0x40
-    const PCIE_LOCAL_ADDRESS FIFO_READ_DATA_ADDR = DEMO_PCIE_FIFO_READ_ADDR; // Tentativa 2: 0x80
+    // Este programa é um teste de comunicação com o SGDMA  inativo
+    const PCIE_LOCAL_ADDRESS FIFO_WRITE_DATA_ADDR = DEMO_PCIE_FIFO_WRITE_ADDR; 
+    const PCIE_LOCAL_ADDRESS FIFO_READ_DATA_ADDR = DEMO_PCIE_FIFO_READ_ADDR; 
 
     // Buffer para armazenar os dados lidos (para facilitar a verificacao)
     DWORD *pReadBack = (DWORD *)malloc(PIO_TEST_SIZE);
@@ -79,8 +75,7 @@ BOOL TEST_PIO_FIFO_FLOW(PCIE_HANDLE hPCIe) {
     }
 
     // 2. LER (FIFO 1 -> Host)
-    // Nota: O loopback no Verilog deve ter transferido os dados imediatamente.
-    bPass = TRUE; // Resetamos a flag de sucesso
+    bPass = TRUE; // Reseta a flag de sucesso
     for (i = 0; i < PIO_TEST_WORDS; i++) {
         val_read = 0;
         
@@ -128,7 +123,7 @@ void UI_ShowMenu(void){
     printf("--- Testes de Loopback (Hardware Modificado) ---\r\n");
 	printf("[%d]: Loopback PIO (Escreve LED -> Le Button)\r\n", MENU_LOOPBACK_PIO);
 	printf("[%d]: Loopback DMA (Escreve FIFO -> Le FIFO)\r\n", MENU_LOOPBACK_DMA);
-    printf("[%d]: Loopback PIO Flow (Word-by-Word)\r\n", MENU_LOOPBACK_PIO_FLOW); // Novo item
+    printf("[%d]: Loopback PIO Flow (Word-by-Word)\r\n", MENU_LOOPBACK_PIO_FLOW);
 	printf("[%d]: Quit\r\n", MENU_QUIT);
 	printf("Please input your selection:");
 }
@@ -139,7 +134,7 @@ int UI_UserSelect(void){
 	return nSel;
 }
 
-// Funções Originais (Mantidas para referência)
+// Funções Originais 
 BOOL TEST_LED(PCIE_HANDLE hPCIe){
 	BOOL bPass;
 	int	Mask;
@@ -167,12 +162,12 @@ char PAT_GEN(int nIndex){
 }
 
 // =================================================================
-// ============== NOVAS FUNÇÕES DE TESTE (LOOPBACK) ================
+// ============== FUNÇÕES DE TESTE LOOPBACK ================
 // =================================================================
 
 BOOL TEST_LOOPBACK_PIO(PCIE_HANDLE hPCIe){
     BOOL bPass = TRUE;
-    DWORD val_to_write = 0x03; // Bits 0 e 1 ligados (Done e Busy no nosso Verilog)
+    DWORD val_to_write = 0x03; // Bits 0 e 1 ligados (Done e Busy no Verilog)
     DWORD val_read = 0;
 
     printf("\n--- Iniciando Teste Loopback PIO ---\n");
@@ -188,7 +183,6 @@ BOOL TEST_LOOPBACK_PIO(PCIE_HANDLE hPCIe){
     usleep(1000);
 
     // 2. Lê do Registrador de Status (Button)
-    // No Verilog fizemos: assign w_poly_done = wire_ctrl_signals[0];
     if (!PCIE_Read32(hPCIe, DEMO_PCIE_USER_BAR, DEMO_PCIE_IO_BUTTON_ADDR, &val_read)){
         printf("ERRO: Falha na leitura PIO.\n");
         return FALSE;
@@ -240,7 +234,7 @@ BOOL TEST_LOOPBACK_DMA(PCIE_HANDLE hPCIe){
         sprintf(szError, "ERRO: PCIE_DmaFifoWrite falhou.\n");
     } else {
         // 3. Ler da FIFO de Saída (FPGA -> Host)
-        // Como o Verilog está em loopback, o dado deve estar lá imediatamente.
+        // Com o Verilog em loopback, o dado esta lá imediatamente.
         printf("Lendo %d bytes da FIFO Read (0x%X)...\n", nTestSize, DEMO_PCIE_FIFO_READ_ADDR);
         bPass = PCIE_DmaFifoRead(hPCIe, DEMO_PCIE_FIFO_READ_ADDR, pBuffRead, nTestSize);
 
@@ -273,21 +267,12 @@ BOOL TEST_LOOPBACK_DMA(PCIE_HANDLE hPCIe){
     return bPass;
 }
 
-// =================================================================
-// =================================================================
 
-// Funções originais mantidas para compatibilidade
 BOOL TEST_DMA_MEMORY(PCIE_HANDLE hPCIe){
-    // (Mantido original, mas geralmente requer SDRAM externa funcionando)
-    // Se o seu teste for apenas RAM interna ou Loopback, isso pode falhar 
-    // dependendo do Verilog carregado.
     return TRUE; 
 }
 
 BOOL TEST_DMA_FIFO(PCIE_HANDLE hPCIe){
-    // Esse teste original assume que a FPGA gera dados ou consome dados
-    // de forma específica. O nosso Loopback DMA acima é mais seguro para
-    // o teste de "Echo".
     return TRUE;
 }
 
@@ -321,7 +306,6 @@ int main(void)
 				case MENU_BUTTON:
 					TEST_BUTTON(hPCIE);
 					break;
-                // Mantivemos os menus originais, mas recomendo usar os nossos abaixo
 				case MENU_DMA_MEMORY:
 					printf("Skipping original memory test.\n");
 					break;
@@ -329,7 +313,6 @@ int main(void)
 					printf("Skipping original FIFO test. Use Loopback DMA.\n");
 					break;
 				
-				// Nossos novos testes
 				case MENU_LOOPBACK_PIO:
 					TEST_LOOPBACK_PIO(hPCIE);
 					break;
