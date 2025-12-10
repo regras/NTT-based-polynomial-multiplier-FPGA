@@ -11,13 +11,15 @@ If you use this repository in your research, please follow the citation guidelin
 ### 1. Using the Full Polynomial Multiplier
 If you utilize the complete multiplier accelerator, please cite **both** works below (Ronald G. F. Silva & Marco A. Henriques **AND** Mert et al.):
 
-> **RONALD G. F. SILVA & MARCO A. HENRIQUES**
-> *"Implementation and Analysis of a Polynomial Product Accelerator on FPGA Based on the Number Theoretic Transform (NTT)"*
+> **Silva, Ronald G. F. (Student), and Marco A. Henriques (Advisor). **
+> *“Implementation and Analysis of a Polynomial Product Accelerator on FPGA Based on the Number Theoretic Transform (NTT).” Undergraduate Thesis in Electrical Engineering, School of Electrical and Computer Engineering, Universidade de Campinas,* 
+Dec. 2025. Video presentation available at https://www.youtube.com/watch?v=VEMBBc5qJ9c
 
 And:
 
 > **A. C. Mert, E. Karabulut, E. Ozturk, E. Savas and A. Aysu**
-> *"An Extensive Study of Flexible Design Methods for the Number Theoretic Transform"*
+> *"An Extensive Study of Flexible Design Methods for the Number Theoretic Transform" IEEE Transactions on Computers,* 
+vol. 71, 2022, 2829--2843, 11.
 
 ### 2. Using Only the NTT/INTT Modules
 If you utilize only the baseline NTT/INTT modules, please cite only the original work:
