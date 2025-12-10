@@ -12,7 +12,7 @@ If you use this repository in your research, please follow the citation guidelin
 If you utilize the complete multiplier accelerator, please cite **both** works below (Ronald G. F. Silva & Marco A. Henriques **AND** Mert et al.):
 
 > **Silva, Ronald G. F. (Student), and Marco A. Henriques (Advisor).**
-> *“Implementation and Analysis of a Polynomial Product Accelerator on FPGA Based on the Number Theoretic Transform (NTT).” Undergraduate Thesis in Electrical Engineering, School of Electrical and Computer Engineering, Universidade de Campinas,* 
+> *“Implementation and Analysis of a Polynomial Product Accelerator on FPGA Based on the Number Theoretic Transform (NTT).” Undergraduate Thesis in Electrical Engineering, School of Electrical and Computer Engineering, Universidade Estadual de Campinas (UNICAMP),* 
 Dec. 2025. Video presentation available at https://www.youtube.com/watch?v=VEMBBc5qJ9c
 
 And:
